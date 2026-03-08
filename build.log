@@ -1,0 +1,37 @@
+
+> jeff.ro2@0.1.0 build C:\Users\jeffp\OneDrive\Documents\jeff.ro2
+> next build
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./components/Hero.tsx:189:11
+Parsing ecmascript source code failed
+[0m [90m 187 |[39m [32m        }[39m
+ [90m 188 |[39m [32m      `[39m}[33m<[39m[33m/[39m[33mstyle[39m[33m>[39m
+[31m[1m>[22m[39m[90m 189 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m     |[39m           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 190 |[39m     )[33m;[39m
+ [90m 191 |[39m }
+ [90m 192 |[39m[0m
+
+Expected corresponding JSX closing tag for <section>
+
+Import trace:
+  Server Component:
+    ./components/Hero.tsx
+    ./app/page.tsx
+
+
+./app
+Invalid import
+'client-only' cannot be imported from a Server Component module. It should only be used from a Client Component.
+The error was caused by using 'styled-jsx'. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
+
+
+
+    at <unknown> (./components/Hero.tsx:189:11)
+ ELIFECYCLE  Command failed with exit code 1.

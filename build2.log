@@ -1,0 +1,24 @@
+
+> jeff.ro2@0.1.0 build C:\Users\jeffp\OneDrive\Documents\jeff.ro2
+> next build
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1460.9ms
+  Running TypeScript ...
+  Collecting page data using 31 workers ...
+  Generating static pages using 31 workers (0/4) ...
+  Generating static pages using 31 workers (1/4) 
+  Generating static pages using 31 workers (2/4) 
+  Generating static pages using 31 workers (3/4) 
+✓ Generating static pages using 31 workers (4/4) in 378.5ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+

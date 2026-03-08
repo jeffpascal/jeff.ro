@@ -1,0 +1,106 @@
+{
+  "ro": {
+    "hero": {
+      "headline": "Transformă-ți Afacerea și Viața cu Inteligența Artificială",
+      "subHeadline": "Automatizează analiza reclamelor, creează conținut viral în secunde și optimizează-ți costurile. Învață de la experți din industrie.",
+      "priceOld": "5.700€",
+      "priceNew": "2.200€",
+      "cta": "Rezervă-ți Locul Acum",
+      "scarcityWarning": "* Ofertă valabilă doar pentru cohorta curentă. Locuri limitate."
+    },
+    "features": {
+      "title": "Ce Îi Învățați",
+      "marketing": {
+        "title": "Marketing & Social Media",
+        "items": [
+          "Generare idei de postări",
+          "Scripturi pentru reels",
+          "Descrieri care vând",
+          "Generare de video-uri profi"
+        ]
+      },
+      "business": {
+        "title": "Business Automation",
+        "items": [
+          "Analiza automată a campaniilor de Facebook & Google Ads prin AI",
+          "Integrări și modificări gestionate de agenți AI",
+          "Optimizarea fluxurilor de lucru"
+        ]
+      }
+    },
+    "fomo": {
+      "banner": "Atenție: Mai sunt doar 8 locuri pentru bonusul de audit personalizat 1-la-1.",
+      "socialProof": "Alătură-te celor care deja folosesc AI-ul pentru a economisi zeci de ore săptămânal."
+    },
+    "authors": {
+      "title": "Cine Suntem",
+      "jeff": {
+        "name": "Jeff",
+        "role": "AI Engineer (ex-IBM)",
+        "description": "Expert în infrastructuri AI, automatizări complexe și integrarea tehnologiei în procesele de business pentru creșterea revenue-ului."
+      },
+      "andra": {
+        "name": "Andra",
+        "role": "Social Media Creator",
+        "description": "Peste 1.000 de video-uri create. Expertă în algoritmi, viralitate și aplicarea AI-ului în procesul creativ vizual."
+      }
+    },
+    "footer": {
+      "cta": "Nu rămâne în urmă. Învață AI Acum.",
+      "ctaButton": "Înscrie-te pe Platforma de Cursuri",
+      "copyright": "© 2026 Toate drepturile rezervate."
+    }
+  },
+  "en": {
+    "hero": {
+      "headline": "Transform Your Business and Life with Artificial Intelligence",
+      "subHeadline": "Automate ad analysis, create viral content in seconds, and optimize your costs. Learn from industry experts.",
+      "priceOld": "€5,700",
+      "priceNew": "€2,200",
+      "cta": "Reserve Your Spot Now",
+      "scarcityWarning": "* Offer valid for the current cohort only. Limited spots available."
+    },
+    "features": {
+      "title": "What You Will Learn",
+      "marketing": {
+        "title": "Marketing & Social Media",
+        "items": [
+          "Infinite post idea generation",
+          "Attention-grabbing reels scripts",
+          "Copywriting that sells",
+          "Professional video generation"
+        ]
+      },
+      "business": {
+        "title": "Business Automation",
+        "items": [
+          "Automated AI analysis for Facebook & Google Ads",
+          "Integrations and changes managed by AI agents",
+          "Workflow optimization"
+        ]
+      }
+    },
+    "fomo": {
+      "banner": "Attention: Only 8 spots left for the 1-on-1 personalized audit bonus.",
+      "socialProof": "Join those who are already using AI to save dozens of hours every week."
+    },
+    "authors": {
+      "title": "Who We Are",
+      "jeff": {
+        "name": "Jeff",
+        "role": "AI Engineer (ex-IBM)",
+        "description": "Expert in AI infrastructures, complex automations, and integrating technology into business processes for revenue growth."
+      },
+      "andra": {
+        "name": "Andra",
+        "role": "Social Media Creator",
+        "description": "Over 1,000 videos created. Expert in algorithms, virality, and applying AI in the visual creative process."
+      }
+    },
+    "footer": {
+      "cta": "Don't fall behind. Learn AI Now.",
+      "ctaButton": "Enroll on the Course Platform",
+      "copyright": "© 2026 All rights reserved."
+    }
+  }
+}
