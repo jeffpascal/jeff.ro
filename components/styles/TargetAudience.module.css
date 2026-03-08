@@ -1,0 +1,76 @@
+.targetSection {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.4), transparent);
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.cardFor {
+    border-top: 4px solid var(--accent-cyan);
+}
+
+.cardNotFor {
+    border-top: 4px solid #F87171;
+    /* red-400 */
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.listItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    font-size: 1.05rem;
+}
+
+.icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.iconCheck {
+    color: var(--accent-cyan);
+}
+
+.iconX {
+    color: #F87171;
+}

@@ -44,6 +44,10 @@ export default function Hero() {
             <Zap size={14} className="text-accent-purple" />
             {t("hero.scarcityWarning")}
           </p>
+          <p className={styles.guaranteeSubtext}>
+            <ShieldCheck size={14} className="text-secondary" />
+            {t("guarantee.badge") || "14-Day Money-Back Guarantee"}
+          </p>
         </div>
       </div>
     </section>

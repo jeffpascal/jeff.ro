@@ -1,0 +1,100 @@
+.curriculumSection {
+    padding: 6rem 0;
+    background: var(--bg-dark);
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.accordionWrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.accordionItem {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordionItem:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.accordionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    border: none;
+    width: 100%;
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s ease;
+}
+
+.accordionHeader:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.iconWrapper {
+    color: var(--accent-purple);
+    transition: transform 0.3s ease;
+}
+
+.iconRotated {
+    transform: rotate(180deg);
+}
+
+.accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.accordionContent.open {
+    max-height: 1000px;
+    transition: max-height 0.6s ease-in-out;
+}
+
+.contentInner {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.moduleList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.moduleList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.checkIcon {
+    color: var(--accent-cyan);
+    flex-shrink: 0;
+    margin-top: 2px;
+}

@@ -49,19 +49,118 @@
             "title": "Ce Spun Cursanții Noștri",
             "items": [
                 {
-                    "name": "Mihai V.",
-                    "role": "Antreprenor E-commerce",
-                    "content": "Acest curs a schimbat complet modul în care generez reclame. Costul pe achiziție a scăzut cu 40% în prima săptămână de implementare a agenților AI."
+                    "content": "Am redus timpul de creare a conținutului de la 8 ore la 45 de minute pe săptămână. Această investiție s-a plătit de 10 ori până acum. Absolut transformator pentru agenția mea.",
+                    "name": "Alexandru M.",
+                    "role": "Founder, Digital Agency"
                 },
                 {
-                    "name": "Elena P.",
-                    "role": "Marketing Manager",
-                    "content": "Pe lângă eficiența tehnică, template-urile pentru reels sunt incredibile. Am economisit zeci de ore pe lună la script-uri."
+                    "content": "Analiza campaniilor pe Facebook îmi lua zile întregi. Acum, sistemul AI îmi arată exact reclamele câștigătoare și taie bugetul pe ce nu merge, complet automat.",
+                    "name": "Elena C.",
+                    "role": "E-commerce Owner"
                 },
                 {
-                    "name": "Alex C.",
-                    "role": "Consultant Business",
-                    "content": "Cea mai bună investiție. Partea de automatizare a campaniilor m-a scos dintr-o rutină obositoare și mi-a crescut marja de profit semnificativ."
+                    "content": "Nu aveam deloc cunoștințe tehnice. Cursul este structurat atât de logic încât în prima săptămână aveam deja un script video viral generat de AI care mi-a adus 10k views.",
+                    "name": "Mihai D.",
+                    "role": "Content Creator"
+                }
+            ]
+        },
+        "guarantee": {
+            "title": "Garanție 100% Fără Risc - 14 Zile",
+            "subtitle": "Testează pe propria afacere",
+            "description": "Suntem atât de convinși de valoarea acestui curs, încât îți oferim 14 zile să testezi. Dacă nu ești convins după primele 2 module că acest program îți va automatiza afacerea, îți returnăm fiecare cent – fără întrebări.",
+            "badge": "14 Zile Money-Back Garanție"
+        },
+        "curriculum": {
+            "title": "Ce Vei Învăța - Structura Cursului",
+            "modules": [
+                {
+                    "title": "MODULUL 1: Fundamente AI & Mindset",
+                    "items": [
+                        "Cum funcționează AI-ul (fără cod)",
+                        "Instrumentele esențiale (ChatGPT, Claude, Gemini, Perplexity)",
+                        "De ce 80% din oameni folosesc AI greșit și cum să eviți asta"
+                    ]
+                },
+                {
+                    "title": "MODULUL 2: Prompt Engineering & Productivitate Personală",
+                    "items": [
+                        "Formula promptului perfect",
+                        "AI ca asistent personal: email, calendar, research, prezentări",
+                        "Automatizarea task-urilor zilnice"
+                    ]
+                },
+                {
+                    "title": "MODULUL 3: Marketing & Social Media cu AI",
+                    "items": [
+                        "Generarea de idei de conținut la infinit",
+                        "Scripturi pentru Reels/TikTok care viralizează",
+                        "Descrieri și copy persuasiv generat de AI",
+                        "Generare video cu AI (Runway, Sora, HeyGen)"
+                    ]
+                },
+                {
+                    "title": "MODULUL 4: Business Automation",
+                    "items": [
+                        "Automatizări cu Make.com și Zapier (fără cod)",
+                        "AI Agenți care lucrează pentru tine",
+                        "Integrarea AI în fluxurile de lucru existente",
+                        "CRM și sales automation"
+                    ]
+                },
+                {
+                    "title": "MODULUL 5: Publicitate Plătită & Analiză cu AI",
+                    "items": [
+                        "Analiza automată a campaniilor Facebook Ads & Google Ads",
+                        "Generarea de reclame cu AI (copy + creative)",
+                        "Optimizarea bugetului cu date, nu cu instinct"
+                    ]
+                },
+                {
+                    "title": "MODULUL 6: Implementare & Scalare",
+                    "items": [
+                        "Construirea unui sistem AI complet în afacerea ta",
+                        "KPIs și măsurarea ROI-ului",
+                        "Ce urmează: tendințe AI 2025-2026",
+                        "Audit final al implementării"
+                    ]
+                }
+            ]
+        },
+        "targetAudience": {
+            "title": "Pentru Cine Este Acest Curs?",
+            "forTitle": "✅ Acest curs ESTE pentru tine dacă:",
+            "forItems": [
+                "Ești antreprenor și vrei să-ți scalezi afacerea fără să angajezi echipe masive.",
+                "Petreci prea mult timp pe task-uri manuale (creare conținut, emailuri, facturare).",
+                "Vrei să folosești AI pentru reclame și marketing care aduc clienți reali.",
+                "Ești dispus să implementezi tehnicile chiar de azi."
+            ],
+            "notForTitle": "❌ Acest curs NU este pentru tine dacă:",
+            "notForItems": [
+                "Cauți metode de 'îmbogățire rapidă' peste noapte fără muncă.",
+                "Vrei doar teorie de la nivel de programator (tot cursul este no-code).",
+                "Nu ai o afacere, un job de freelancer sau planuri clare de aplicare."
+            ]
+        },
+        "faq": {
+            "title": "Întrebări Frecvente",
+            "items": [
+                {
+                    "q": "Nu am cunoștințe tehnice – pot să fac față?",
+                    "a": "Da! Cursul este creat 100% pentru non-tehnici. Folosim doar platforme \"no-code\" gen Make sau Zapier, și interfețe intuitive."
+                },
+                {
+                    "q": "Nu prea am timp liber.",
+                    "a": "Modulele sunt scurte (20-30 minute) și direct acționabile. Mai mult, ce înveți vineri te ajută să economisești 5 ore luni dimineața."
+                },
+                {
+                    "q": "AI se schimbă rapid – cursul va fi perimat?",
+                    "a": "Ai acces VEAȚĂ la conținut, inclusiv la TOATE actualizările viitoare lansate. Când apar unelte noi, adăugăm module noi."
+                },
+                {
+                    "q": "De ce 2.200 EUR și nu un curs de 50 EUR de pe Udemy?",
+                    "a": "Cursurile generice îți vând teorie. Aici primești un sistem integrat business + marketing, template-uri dovedite, suport într-o comunitate restrânsă și o experiență dictată de un inginer IBM."
                 }
             ]
         },
@@ -121,19 +220,118 @@
             "title": "What Our Students Say",
             "items": [
                 {
-                    "name": "Mihai V.",
-                    "role": "E-commerce Entrepreneur",
-                    "content": "This course completely changed how I generate ads. My CPA dropped by 40% in the first week of implementing AI agents."
+                    "content": "I reduced content creation time from 8 hours to 45 minutes per week. This investment paid for itself 10x already. Absolutely transformative for my agency.",
+                    "name": "Alexandru M.",
+                    "role": "Founder, Digital Agency"
                 },
                 {
-                    "name": "Elena P.",
-                    "role": "Marketing Manager",
-                    "content": "Beyond technical efficiency, the reels templates are incredible. I've saved dozens of hours a month on scripts."
+                    "content": "Facebook campaign analysis used to take me days. Now, the AI system shows me exactly the winning ads and cuts the budget on the losers automatically.",
+                    "name": "Elena C.",
+                    "role": "E-commerce Owner"
                 },
                 {
-                    "name": "Alex C.",
-                    "role": "Business Consultant",
-                    "content": "Best investment ever. The campaign automation part got me out of a tiring routine and significantly increased my profit margin."
+                    "content": "I had zero technical background. The course is structured so logically that in week one, I already had a viral AI-generated video script hitting 10k views.",
+                    "name": "Mihai D.",
+                    "role": "Content Creator"
+                }
+            ]
+        },
+        "guarantee": {
+            "title": "100% Risk-Free 14-Day Guarantee",
+            "subtitle": "Test it on your own business",
+            "description": "We are so confident in the value of this course that we offer a 14-day trial. If you are not convinced after the first 2 modules that this program will automate your business, we will return every cent - no questions asked.",
+            "badge": "14-Day Money-Back Guarantee"
+        },
+        "curriculum": {
+            "title": "What You Will Learn",
+            "modules": [
+                {
+                    "title": "MODULE 1: AI Fundamentals & Mindset",
+                    "items": [
+                        "How AI works (no-code)",
+                        "Essential tools (ChatGPT, Claude, Gemini, Perplexity)",
+                        "Why 80% use AI wrong and how to avoid it"
+                    ]
+                },
+                {
+                    "title": "MODULE 2: Prompt Engineering & Productivity",
+                    "items": [
+                        "The perfect prompt formula",
+                        "AI as a personal assistant: email, calendar, research",
+                        "Automating daily tasks"
+                    ]
+                },
+                {
+                    "title": "MODULE 3: AI Marketing & Social Media",
+                    "items": [
+                        "Infinite content idea generation",
+                        "Reels/TikTok scripts that go viral",
+                        "Persuasive copy & descriptions",
+                        "AI video generation (Runway, Sora, HeyGen)"
+                    ]
+                },
+                {
+                    "title": "MODULE 4: Business Automation",
+                    "items": [
+                        "No-code automation with Make.com and Zapier",
+                        "AI Agents working for you",
+                        "Integrating AI in existing workflows",
+                        "CRM and sales automation"
+                    ]
+                },
+                {
+                    "title": "MODULE 5: Paid Ads & AI Analytics",
+                    "items": [
+                        "Automated Facebook & Google Ads analysis",
+                        "Ad generation (copy + creatives)",
+                        "Data-driven budget optimization"
+                    ]
+                },
+                {
+                    "title": "MODULE 6: Implementation & Scaling",
+                    "items": [
+                        "Building a complete AI ecosystem in your business",
+                        "KPIs & ROI measurement",
+                        "What's next: AI trends 2025-2026",
+                        "Final implementation audit"
+                    ]
+                }
+            ]
+        },
+        "targetAudience": {
+            "title": "Who Is This Course For?",
+            "forTitle": "✅ This course IS for you if:",
+            "forItems": [
+                "You're an entrepreneur looking to scale without hiring massive teams.",
+                "You spend too much time on manual tasks (content, emails, invoicing).",
+                "You want to use AI for ads and marketing that actually bring clients.",
+                "You're ready to implement these techniques right now."
+            ],
+            "notForTitle": "❌ This course is NOT for you if:",
+            "notForItems": [
+                "You're looking for an overnight 'get-rich-quick' scheme.",
+                "You only want deep programming theory (this course is no-code).",
+                "You do not have a business, a freelance job, or clear implementation plans."
+            ]
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+                {
+                    "q": "I have no technical knowledge - can I do this?",
+                    "a": "Yes! The entire course is designed for non-technical people. We exclusively use 'no-code' platforms like Make or Zapier."
+                },
+                {
+                    "q": "I don't have much free time.",
+                    "a": "The modules are short (20-30 mins) and actionable. What you learn on Friday saves you 5 hours by Monday."
+                },
+                {
+                    "q": "AI changes fast - won't this become outdated?",
+                    "a": "You get LIFETIME access, including ALL future module updates. When new tools launch, we add new material."
+                },
+                {
+                    "q": "Why 2,200 EUR and not a 50 EUR Udemy course?",
+                    "a": "Generic courses sell theory. Here you get an integrated business/marketing system, proven templates, small community support, and expertise designed by an IBM engineer."
                 }
             ]
         },

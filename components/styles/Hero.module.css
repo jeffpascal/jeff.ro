@@ -142,6 +142,16 @@
     max-width: 90vw;
 }
 
+.guaranteeSubtext {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
 @keyframes float {
     0% {
         transform: translateY(0) scale(1);
