@@ -1,0 +1,165 @@
+.testimonialsSection {
+    padding: 6rem 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.carouselWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carouselContainer {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 1rem 1rem 2rem 1rem;
+    margin: 0 -1rem;
+    /* Negative margin to allow shadow bleed */
+    /* Hide Scrollbar */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    width: 100%;
+}
+
+.carouselContainer::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+.testimonialCard {
+    flex: 0 0 calc(100% - 2rem);
+    max-width: 400px;
+    min-width: 280px;
+    scroll-snap-align: center;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonialCard:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+.quoteIcon {
+    opacity: 0.6;
+    margin-bottom: -0.5rem;
+}
+
+.testimonialContent {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.testimonialAuthor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+}
+
+.authorAvatarPlaceholder {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.authorName {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 0.1rem 0;
+}
+
+.authorRole {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Nav Buttons */
+.navBtn {
+    position: absolute;
+    z-index: 10;
+    background: rgba(11, 15, 25, 0.8);
+    border: 1px solid var(--border-color);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navBtn:hover {
+    background: var(--text-primary);
+    color: var(--bg-dark);
+    transform: scale(1.05);
+}
+
+.prev {
+    left: -1.5rem;
+}
+
+.next {
+    right: -1.5rem;
+}
+
+/* Desktop specific tweaks */
+@media (min-width: 768px) {
+    .testimonialCard {
+        flex: 0 0 calc(50% - 1.5rem);
+        scroll-snap-align: start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .testimonialCard {
+        flex: 0 0 calc(33.333% - 1.5rem);
+    }
+}
+
+/* Hide buttons on mobile where native touch swipe is better */
+@media (max-width: 767px) {
+    .navBtn {
+        display: none;
+    }
+
+    .carouselContainer {
+        gap: 1rem;
+    }
+}
