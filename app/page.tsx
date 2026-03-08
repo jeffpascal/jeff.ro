@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import FOMOBanner from "../components/FOMOBanner";
 import CourseFeatures from "../components/CourseFeatures";
 import Authors from "../components/Authors";
+import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 
@@ -26,6 +27,7 @@ export default function Home() {
       <Hero />
       <CourseFeatures />
       <Authors />
+      <Testimonials />
       <Footer />
 
       <style jsx>{`
