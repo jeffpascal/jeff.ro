@@ -3,9 +3,12 @@
 import React from "react";
 import Hero from "../components/Hero";
 import FOMOBanner from "../components/FOMOBanner";
+import HowItWorks from "../components/HowItWorks";
+import BeforeAfter from "../components/BeforeAfter";
+import TargetAudience from "../components/TargetAudience";
 import CourseFeatures from "../components/CourseFeatures";
 import Curriculum from "../components/Curriculum";
-import TargetAudience from "../components/TargetAudience";
+import ValueStack from "../components/ValueStack";
 import Authors from "../components/Authors";
 import Testimonials from "../components/Testimonials";
 import Guarantee from "../components/Guarantee";
@@ -30,9 +33,12 @@ export default function Home() {
       </header>
 
       <Hero />
+      <HowItWorks />
+      <BeforeAfter />
       <TargetAudience />
       <CourseFeatures />
       <Curriculum />
+      <ValueStack />
       <Authors />
       <Testimonials />
       <Guarantee />

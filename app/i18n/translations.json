@@ -143,6 +143,90 @@
                 "Nu ai o afacere, un job de freelancer sau planuri clare de aplicare."
             ]
         },
+        "howItWorks": {
+            "title": "Cum Funcționează",
+            "steps": [
+                {
+                    "emoji": "🎓",
+                    "title": "Înveți",
+                    "description": "Accesezi modulele video când vrei, în ritmul tău (20–30 min/lecție)"
+                },
+                {
+                    "emoji": "⚡",
+                    "title": "Implementezi",
+                    "description": "Aplici direct în afacere cu template-urile și prompturile noastre"
+                },
+                {
+                    "emoji": "📈",
+                    "title": "Scalezi",
+                    "description": "Rezultate vizibile din primele 2 săptămâni"
+                }
+            ]
+        },
+        "beforeAfter": {
+            "title": "Transformarea",
+            "beforeTitle": "Fără Curs",
+            "afterTitle": "Cu Curs",
+            "items": [
+                {
+                    "before": "8 ore/săpt creare conținut manual",
+                    "after": "45 min cu AI"
+                },
+                {
+                    "before": "Campanii Facebook pe instinct",
+                    "after": "Analiză automată, rapoarte instant"
+                },
+                {
+                    "before": "0 automatizări în business",
+                    "after": "10+ fluxuri automatizate"
+                },
+                {
+                    "before": "Dependent de agenții externe scumpe",
+                    "after": "Totul in-house cu AI"
+                },
+                {
+                    "before": "Fiecare email, factură, postare – manual",
+                    "after": "Automatizat cu Make/Zapier"
+                }
+            ]
+        },
+        "valueStack": {
+            "title": "Ce Primești",
+            "items": [
+                {
+                    "label": "6 Module Video Complete",
+                    "value": "1.500 €"
+                },
+                {
+                    "label": "Acces Pe Viață + Update-uri",
+                    "value": "800 €"
+                },
+                {
+                    "label": "100+ Prompturi + Template-uri",
+                    "value": "500 €"
+                },
+                {
+                    "label": "Acces Comunitate Privată",
+                    "value": "600 €/an"
+                },
+                {
+                    "label": "Audit AI Personalizat 1-la-1 (bonus 48h)",
+                    "value": "500 €"
+                },
+                {
+                    "label": "Sesiuni Live Q&A cu Instructorii",
+                    "value": "400 €"
+                },
+                {
+                    "label": "Certificat de Absolvire",
+                    "value": "200 €"
+                }
+            ],
+            "totalLabel": "Valoare totală",
+            "totalValue": "4.500 €",
+            "payLabel": "Tu plătești",
+            "payValue": "2.200 €"
+        },
         "faq": {
             "title": "Întrebări Frecvente",
             "items": [
@@ -156,11 +240,19 @@
                 },
                 {
                     "q": "AI se schimbă rapid – cursul va fi perimat?",
-                    "a": "Ai acces VEAȚĂ la conținut, inclusiv la TOATE actualizările viitoare lansate. Când apar unelte noi, adăugăm module noi."
+                    "a": "Ai acces pe VIAȚĂ la conținut, inclusiv la TOATE actualizările viitoare lansate. Când apar unelte noi, adăugăm module noi."
                 },
                 {
                     "q": "De ce 2.200 EUR și nu un curs de 50 EUR de pe Udemy?",
                     "a": "Cursurile generice îți vând teorie. Aici primești un sistem integrat business + marketing, template-uri dovedite, suport într-o comunitate restrânsă și o experiență dictată de un inginer IBM."
+                },
+                {
+                    "q": "Am mai cumpărat cursuri online și nu le-am terminat.",
+                    "a": "Cursul nostru e bazat pe cohorte cu deadline-uri, sesiuni live și o comunitate care te ține accountable. Nu ești singur."
+                },
+                {
+                    "q": "Există garanție?",
+                    "a": "Da! Garanție 14 zile, 100% rambursabil. Parcurgi primele 2 module, dacă nu ești convins, primești banii înapoi."
                 }
             ]
         },
@@ -314,6 +406,90 @@
                 "You do not have a business, a freelance job, or clear implementation plans."
             ]
         },
+        "howItWorks": {
+            "title": "How It Works",
+            "steps": [
+                {
+                    "emoji": "🎓",
+                    "title": "Learn",
+                    "description": "Access video modules anytime, at your own pace (20–30 min/lesson)"
+                },
+                {
+                    "emoji": "⚡",
+                    "title": "Implement",
+                    "description": "Apply directly in your business with our templates and prompts"
+                },
+                {
+                    "emoji": "📈",
+                    "title": "Scale",
+                    "description": "Visible results within the first 2 weeks"
+                }
+            ]
+        },
+        "beforeAfter": {
+            "title": "The Transformation",
+            "beforeTitle": "Without Course",
+            "afterTitle": "With Course",
+            "items": [
+                {
+                    "before": "8 hrs/week creating content manually",
+                    "after": "45 min with AI"
+                },
+                {
+                    "before": "Facebook campaigns run on instinct",
+                    "after": "Automated analysis, instant reports"
+                },
+                {
+                    "before": "0 automations in business",
+                    "after": "10+ automated workflows"
+                },
+                {
+                    "before": "Dependent on expensive agencies",
+                    "after": "Everything in-house with AI"
+                },
+                {
+                    "before": "Every email, invoice, post – manual",
+                    "after": "Automated with Make/Zapier"
+                }
+            ]
+        },
+        "valueStack": {
+            "title": "What You Get",
+            "items": [
+                {
+                    "label": "6 Complete Video Modules",
+                    "value": "€1,500"
+                },
+                {
+                    "label": "Lifetime Access + Updates",
+                    "value": "€800"
+                },
+                {
+                    "label": "100+ Prompts + Templates",
+                    "value": "€500"
+                },
+                {
+                    "label": "Private Community Access",
+                    "value": "€600/yr"
+                },
+                {
+                    "label": "1-on-1 AI Audit (48h bonus)",
+                    "value": "€500"
+                },
+                {
+                    "label": "Live Q&A Sessions w/ Instructors",
+                    "value": "€400"
+                },
+                {
+                    "label": "Certificate of Completion",
+                    "value": "€200"
+                }
+            ],
+            "totalLabel": "Total Value",
+            "totalValue": "€4,500",
+            "payLabel": "You Pay",
+            "payValue": "€2,200"
+        },
         "faq": {
             "title": "Frequently Asked Questions",
             "items": [
@@ -332,6 +508,14 @@
                 {
                     "q": "Why 2,200 EUR and not a 50 EUR Udemy course?",
                     "a": "Generic courses sell theory. Here you get an integrated business/marketing system, proven templates, small community support, and expertise designed by an IBM engineer."
+                },
+                {
+                    "q": "I've bought courses before and never finished them.",
+                    "a": "Our course is cohort-based with deadlines, live sessions, and a community that keeps you accountable. You're not alone."
+                },
+                {
+                    "q": "Is there a guarantee?",
+                    "a": "Yes! A 14-day, 100% money-back guarantee. Complete the first 2 modules, and if you're not convinced, you get your money back."
                 }
             ]
         },
