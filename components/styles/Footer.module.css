@@ -21,20 +21,9 @@
     -webkit-text-fill-color: transparent;
 }
 
-.footerBtn {
-    background: var(--accent-gradient);
-    color: white;
-    border: none;
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
-}
-
-.footerBtn:hover {
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
-    transform: translateY(-2px);
-}
-
-.footerBtn::after {
-    display: none;
+.formWrapper {
+    width: 100%;
+    max-width: 540px;
 }
 
 .footerBottom {

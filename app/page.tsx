@@ -3,15 +3,17 @@
 import React from "react";
 import Hero from "../components/Hero";
 import FOMOBanner from "../components/FOMOBanner";
+import PainPoints from "../components/PainPoints";
 import HowItWorks from "../components/HowItWorks";
-import BeforeAfter from "../components/BeforeAfter";
-import TargetAudience from "../components/TargetAudience";
+import TranslationSlider from "../components/TranslationSlider";
+import AIStudio from "../components/AIStudio";
+import SocialProofOrders from "../components/SocialProofOrders";
 import CourseFeatures from "../components/CourseFeatures";
 import Curriculum from "../components/Curriculum";
-import ValueStack from "../components/ValueStack";
+import BeforeAfter from "../components/BeforeAfter";
+import Tiers from "../components/Tiers";
+import TargetAudience from "../components/TargetAudience";
 import Authors from "../components/Authors";
-import Testimonials from "../components/Testimonials";
-import Guarantee from "../components/Guarantee";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
 import LanguageSwitcher from "../components/LanguageSwitcher";
@@ -26,22 +28,24 @@ export default function Home() {
         <div className={`container ${styles.navInner}`}>
           <div className={styles.logoPlaceholder}>
             <div className={styles.logoDot}></div>
-            <span className={styles.fontBold}>AI Mastery</span>
+            <span className={styles.fontBold}>AI Commerce</span>
           </div>
           <LanguageSwitcher />
         </div>
       </header>
 
       <Hero />
+      <PainPoints />
       <HowItWorks />
-      <BeforeAfter />
-      <TargetAudience />
+      <TranslationSlider />
+      <AIStudio />
+      <SocialProofOrders />
       <CourseFeatures />
       <Curriculum />
-      <ValueStack />
+      <BeforeAfter />
+      <Tiers />
+      <TargetAudience />
       <Authors />
-      <Testimonials />
-      <Guarantee />
       <FAQ />
       <Footer />
     </main>

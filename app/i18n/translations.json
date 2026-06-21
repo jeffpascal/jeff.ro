@@ -1,527 +1,691 @@
 {
     "ro": {
+        "waitlist": {
+            "placeholder": "Adresa ta de email",
+            "cta": "Intră pe listă",
+            "note": "Fără card, fără obligații. Te anunțăm primul la lansare.",
+            "success": "Ești pe listă! 🎉 Te anunțăm primul când deschidem.",
+            "error": "Verifică adresa de email și încearcă din nou."
+        },
         "hero": {
-            "headline": "Transformă-ți Afacerea și Viața cu Inteligența Artificială",
-            "subHeadline": "Automatizează analiza reclamelor, creează conținut viral în secunde și optimizează-ți costurile. Învață de la experți din industrie.",
-            "priceOld": "5.700€",
-            "priceNew": "2.200€",
-            "cta": "Rezervă-ți Locul Acum",
-            "scarcityWarning": "* Ofertă valabilă doar pentru cohorta curentă. Locuri limitate."
-        },
-        "features": {
-            "title": "Ce Îi Învățați",
-            "marketing": {
-                "title": "Marketing & Social Media",
-                "items": [
-                    "Generare idei de postări",
-                    "Scripturi pentru reels",
-                    "Descrieri care vând",
-                    "Generare de video-uri profi"
-                ]
-            },
-            "business": {
-                "title": "Business Automation",
-                "items": [
-                    "Analiza automată a campaniilor de Facebook & Google Ads prin AI",
-                    "Integrări și modificări gestionate de agenți AI",
-                    "Optimizarea fluxurilor de lucru"
-                ]
-            }
-        },
-        "fomo": {
-            "banner": "Atenție: Mai sunt doar 8 locuri pentru bonusul de audit personalizat 1-la-1.",
-            "socialProof": "Alătură-te celor care deja folosesc AI-ul pentru a economisi zeci de ore săptămânal."
-        },
-        "authors": {
-            "title": "Cine Suntem",
-            "jeff": {
-                "name": "Jeff",
-                "role": "AI Engineer (ex-IBM)",
-                "description": "Expert în infrastructuri AI, automatizări complexe și integrarea tehnologiei în procesele de business pentru creșterea revenue-ului."
-            },
-            "andra": {
-                "name": "Andra",
-                "role": "Social Media Creator",
-                "description": "Peste 1.000 de video-uri create. Expertă în algoritmi, viralitate și aplicarea AI-ului în procesul creativ vizual."
-            }
-        },
-        "testimonials": {
-            "title": "Ce Spun Cursanții Noștri",
-            "items": [
+            "badge": "AI Commerce",
+            "headline": "Magazinul tău online, construit cu AI. Lansezi produse și reclame în minute — nu în săptămâni.",
+            "subHeadline": "De la idee la produs live pe site în 15-30 de minute. Reclame pornite în alte 15-30. Iterezi rapid, afli ce vinde și scalezi — fără developer, fără agenție, fără luni de așteptare.",
+            "promises": [
                 {
-                    "content": "Am redus timpul de creare a conținutului de la 8 ore la 45 de minute pe săptămână. Această investiție s-a plătit de 10 ori până acum. Absolut transformator pentru agenția mea.",
-                    "name": "Alexandru M.",
-                    "role": "Founder, Digital Agency"
+                    "emoji": "⚡",
+                    "title": "Produs nou în 15-30 min",
+                    "desc": "De la idee la pagină live, gata de vânzare."
                 },
                 {
-                    "content": "Analiza campaniilor pe Facebook îmi lua zile întregi. Acum, sistemul AI îmi arată exact reclamele câștigătoare și taie bugetul pe ce nu merge, complet automat.",
-                    "name": "Elena C.",
-                    "role": "E-commerce Owner"
+                    "emoji": "🎯",
+                    "title": "Reclame în 15-30 min",
+                    "desc": "Campanie + tracking, gata să aducă trafic."
                 },
                 {
-                    "content": "Nu aveam deloc cunoștințe tehnice. Cursul este structurat atât de logic încât în prima săptămână aveam deja un script video viral generat de AI care mi-a adus 10k views.",
-                    "name": "Mihai D.",
-                    "role": "Content Creator"
+                    "emoji": "🔁",
+                    "title": "Iterezi într-o zi",
+                    "desc": "Testezi, păstrezi ce vinde, tai ce nu."
                 }
             ]
         },
-        "guarantee": {
-            "title": "Garanție 100% Fără Risc - 14 Zile",
-            "subtitle": "Testează pe propria afacere",
-            "description": "Suntem atât de convinși de valoarea acestui curs, încât îți oferim 14 zile să testezi. Dacă nu ești convins după primele 2 module că acest program îți va automatiza afacerea, îți returnăm fiecare cent – fără întrebări.",
-            "badge": "14 Zile Money-Back Garanție"
+        "fomo": {
+            "banner": "Lista de așteptare e deschisă — locuri limitate pentru primul val.",
+            "socialProof": "Magazine ecom care se lansează în zile, nu în luni. Construite și operate cu AI."
+        },
+        "painPoints": {
+            "title": "Sună cunoscut?",
+            "subtitle": "Dacă te regăsești aici, exact asta rezolvăm.",
+            "items": [
+                {
+                    "emoji": "🐌",
+                    "problem": "Ai un magazin pe WordPress care se mișcă execrabil.",
+                    "solution": "Site rapid din construcție — viteză de mașină sport, scor Google bun, mai puțini clienți pierduți."
+                },
+                {
+                    "emoji": "🎯",
+                    "problem": "Plătești Google și Facebook Ads, dar nu ești sigur că setup-ul de pixel e bun.",
+                    "solution": "Tracking corect din prima: Meta Pixel + CAPI server-side + Google Analytics, ca să știi exact ce reclamă face bani."
+                },
+                {
+                    "emoji": "🌍",
+                    "problem": "Vrei să te extinzi pe altă piață, dar e scump și lent să traduci tot profesionist.",
+                    "solution": "Traducem tot, inclusiv textul din imagini. Același magazin, piață nouă, în zile."
+                },
+                {
+                    "emoji": "⏳",
+                    "problem": "Aștepți developerul sau agenția săptămâni pentru fiecare produs sau reclamă.",
+                    "solution": "Cu AI: produs live în 15-30 min, reclamă pornită în alte 15-30. Iterezi azi, nu luna viitoare."
+                }
+            ]
+        },
+        "howItWorks": {
+            "title": "De la idee la vânzare, în aceeași zi",
+            "steps": [
+                {
+                    "emoji": "💡",
+                    "title": "Idee",
+                    "description": "Îmi spui ce vrei să vinzi."
+                },
+                {
+                    "emoji": "🛒",
+                    "title": "Produs live",
+                    "description": "Pagină completă pe site în 15-30 min."
+                },
+                {
+                    "emoji": "🎯",
+                    "title": "Reclame pornite",
+                    "description": "Campanie + tracking corect în alte 15-30 min."
+                },
+                {
+                    "emoji": "🔁",
+                    "title": "Iterezi",
+                    "description": "Vezi datele, păstrezi ce vinde, scalezi."
+                }
+            ]
+        },
+        "translation": {
+            "title": "Vinde pe orice piață. Traducem și imaginile.",
+            "subtitle": "Trage de slider — aceeași imagine, tradusă automat. Nu doar textul site-ului, ci și textul din poze.",
+            "leftLabel": "🇷🇴 Română",
+            "rightLabel": "🇬🇧 English",
+            "note": "Exemplu real dintr-un magazin pe care îl operăm. Lansare pe o piață nouă fără să refaci tot conținutul de la zero."
+        },
+        "aiStudio": {
+            "title": "Un studio de marketing AI, la degetele tale",
+            "subtitle": "Reclame, creative și imagini de produs — generate cu AI, cu acces direct în conturile tale de Meta Ads și Google Ads.",
+            "items": [
+                {
+                    "emoji": "🖼️",
+                    "title": "Pui o poză, primești variante AI",
+                    "desc": "Nu mai pescuiești poze și nu mai faci tu ședințe foto. Dai o singură imagine cu produsul, AI îți generează variante gata de site și de reclame."
+                },
+                {
+                    "emoji": "🧠",
+                    "title": "Te sfătuiești cu el oricând",
+                    "desc": "Întrebi orice despre campanii, buget, audiențe sau creative — îți răspunde ca un specialist care îți cunoaște contul."
+                },
+                {
+                    "emoji": "🚀",
+                    "title": "Îți creează campania, dacă vrei",
+                    "desc": "De la zero: structură, target, copy, creative. Tu doar aprobi."
+                },
+                {
+                    "emoji": "🔗",
+                    "title": "Acces direct în Meta & Google Ads",
+                    "desc": "Fără export-import manual; lucrează direct în conturile tale de reclame."
+                },
+                {
+                    "emoji": "📊",
+                    "title": "Optimizează pe date, nu pe instinct",
+                    "desc": "Vede ce convertește prin tracking-ul corect și mută bugetul acolo unde aduce vânzări."
+                }
+            ]
+        },
+        "features": {
+            "title": "Două lucruri pe care le primești din prima zi",
+            "marketing": {
+                "title": "⚡ Lansare în minute, nu în săptămâni",
+                "items": [
+                    "Produs nou pe site în 15-30 min",
+                    "Reclame pornite în alte 15-30 min",
+                    "Iterezi rapid: testezi, înveți, scalezi",
+                    "Fără developer, fără agenție"
+                ]
+            },
+            "business": {
+                "title": "🛡️ Mașinăria de conversie, inclusă",
+                "items": [
+                    "Viteză de încărcare de mașină sport",
+                    "Recuperare coș abandonat (exit-intent + email automat)",
+                    "Plăți native: Revolut, Apple Pay, Google Pay, card, ramburs",
+                    "Panou de administrare cu comenzi și rapoarte"
+                ]
+            }
         },
         "curriculum": {
-            "title": "Ce Vei Învăța - Structura Cursului",
+            "title": "Tot ce are nevoie un magazin serios, deja inclus",
             "modules": [
                 {
-                    "title": "MODULUL 1: Fundamente AI & Mindset",
+                    "title": "🏎️ Viteză & performanță",
                     "items": [
-                        "Cum funcționează AI-ul (fără cod)",
-                        "Instrumentele esențiale (ChatGPT, Claude, Gemini, Perplexity)",
-                        "De ce 80% din oameni folosesc AI greșit și cum să eviți asta"
+                        "Site care zboară, optimizat pentru viteză",
+                        "Scor Google bun → mai puțini clienți pierduți",
+                        "Mobil-first: majoritatea traficului ecom e pe telefon"
                     ]
                 },
                 {
-                    "title": "MODULUL 2: Prompt Engineering & Productivitate Personală",
+                    "title": "🚪 Recuperare coș abandonat",
                     "items": [
-                        "Formula promptului perfect",
-                        "AI ca asistent personal: email, calendar, research, prezentări",
-                        "Automatizarea task-urilor zilnice"
+                        "Prinde clientul care pleacă (exit-intent)",
+                        "Îl aduce înapoi cu email + reducere automată",
+                        "Recuperezi vânzări care altfel se pierdeau"
                     ]
                 },
                 {
-                    "title": "MODULUL 3: Marketing & Social Media cu AI",
+                    "title": "💳 Plăți & checkout",
                     "items": [
-                        "Generarea de idei de conținut la infinit",
-                        "Scripturi pentru Reels/TikTok care viralizează",
-                        "Descrieri și copy persuasiv generat de AI",
-                        "Generare video cu AI (Runway, Sora, HeyGen)"
+                        "Integrat nativ cu Revolut, Apple Pay și Google Pay",
+                        "Card și ramburs incluse",
+                        "Checkout dintr-un tap, zero frecare"
                     ]
                 },
                 {
-                    "title": "MODULUL 4: Business Automation",
+                    "title": "🌍 Multi-piață & traducere",
                     "items": [
-                        "Automatizări cu Make.com și Zapier (fără cod)",
-                        "AI Agenți care lucrează pentru tine",
-                        "Integrarea AI în fluxurile de lucru existente",
-                        "CRM și sales automation"
+                        "Vinzi în RO și pe alte piețe cu același magazin",
+                        "Traducem tot, inclusiv textul din imagini",
+                        "Extindere în zile, nu în luni"
                     ]
                 },
                 {
-                    "title": "MODULUL 5: Publicitate Plătită & Analiză cu AI",
+                    "title": "📊 Administrare & analytics",
                     "items": [
-                        "Analiza automată a campaniilor Facebook Ads & Google Ads",
-                        "Generarea de reclame cu AI (copy + creative)",
-                        "Optimizarea bugetului cu date, nu cu instinct"
+                        "Comenzi, rata de recuperare, top produse — într-un loc",
+                        "Vezi ce se întâmplă fără să întrebi pe nimeni",
+                        "Conform GDPR & cookie consent"
                     ]
                 },
                 {
-                    "title": "MODULUL 6: Implementare & Scalare",
+                    "title": "🎯 Reclame & tracking corect",
                     "items": [
-                        "Construirea unui sistem AI complet în afacerea ta",
-                        "KPIs și măsurarea ROI-ului",
-                        "Ce urmează: tendințe AI 2025-2026",
-                        "Audit final al implementării"
+                        "Meta Pixel + CAPI server-side + Google Analytics",
+                        "Configurate cum trebuie din prima",
+                        "Știi exact ce reclamă face bani"
+                    ]
+                }
+            ]
+        },
+        "beforeAfter": {
+            "title": "Înainte vs. după",
+            "beforeTitle": "Înainte",
+            "afterTitle": "După",
+            "items": [
+                {
+                    "before": "Săptămâni cu agenția pentru fiecare schimbare",
+                    "after": "Produs live în 15-30 min"
+                },
+                {
+                    "before": "Site lent pe WordPress",
+                    "after": "Viteză de mașină sport"
+                },
+                {
+                    "before": "Nu știi dacă pixelul e configurat corect",
+                    "after": "Tracking corect, vezi ce vinde"
+                },
+                {
+                    "before": "Extindere pe altă piață = scump și lent",
+                    "after": "Piață nouă în zile, imagini traduse"
+                },
+                {
+                    "before": "Reclame făcute pe instinct",
+                    "after": "Reclame AI optimizate pe date"
+                }
+            ]
+        },
+        "tiers": {
+            "title": "Cum decurge colaborarea",
+            "subtitle": "Treci de la «vorbește prin mine» la «îl conduci tu», în ritmul tău.",
+            "items": [
+                {
+                    "tag": "Tier 1 · Done-for-you",
+                    "title": "Vorbești prin mine",
+                    "desc": "La început lucrezi prin noi: îți construim magazinul, pornim reclamele și operăm totul. Tu doar ne spui ce vrei să vinzi.",
+                    "points": [
+                        "Construim și lansăm magazinul pentru tine",
+                        "Pornim și gestionăm reclamele",
+                        "Zero parte tehnică din partea ta"
+                    ]
+                },
+                {
+                    "tag": "Tier 2 · Operator",
+                    "title": "Îl conduci tu",
+                    "desc": "Pe măsură ce te obișnuiești, te învățăm să folosești AI-ul și îți predăm magazinul. Îl operezi singur, cu expertul AI lângă tine.",
+                    "points": [
+                        "Te învățăm să folosești AI-ul pas cu pas",
+                        "Primești controlul complet asupra magazinului",
+                        "Magazinul e al tău — nu ești blocat la noi"
                     ]
                 }
             ]
         },
         "targetAudience": {
-            "title": "Pentru Cine Este Acest Curs?",
-            "forTitle": "✅ Acest curs ESTE pentru tine dacă:",
+            "title": "Pentru cine e",
+            "forTitle": "✅ E pentru tine dacă:",
             "forItems": [
-                "Ești antreprenor și vrei să-ți scalezi afacerea fără să angajezi echipe masive.",
-                "Petreci prea mult timp pe task-uri manuale (creare conținut, emailuri, facturare).",
-                "Vrei să folosești AI pentru reclame și marketing care aduc clienți reali.",
-                "Ești dispus să implementezi tehnicile chiar de azi."
+                "Ai (sau vrei) un magazin online și vrei să te miști rapid.",
+                "Faci dropshipping sau testezi produse și vrei să lansezi azi, nu peste o lună.",
+                "Plătești reclame și vrei să fii sigur că tracking-ul e corect.",
+                "Vrei să te extinzi pe altă piață fără costuri mari de traducere."
             ],
-            "notForTitle": "❌ Acest curs NU este pentru tine dacă:",
+            "notForTitle": "❌ Nu e pentru tine dacă:",
             "notForItems": [
-                "Cauți metode de 'îmbogățire rapidă' peste noapte fără muncă.",
-                "Vrei doar teorie de la nivel de programator (tot cursul este no-code).",
-                "Nu ai o afacere, un job de freelancer sau planuri clare de aplicare."
+                "Cauți «îmbogățire rapidă» fără să vinzi nimic real.",
+                "Vrei doar un site de prezentare, fără intenție de vânzare.",
+                "Nu ești dispus să testezi și să iterezi."
             ]
         },
-        "howItWorks": {
-            "title": "Cum Funcționează",
-            "steps": [
-                {
-                    "emoji": "🎓",
-                    "title": "Înveți",
-                    "description": "Accesezi modulele video când vrei, în ritmul tău (20–30 min/lecție)"
-                },
-                {
-                    "emoji": "⚡",
-                    "title": "Implementezi",
-                    "description": "Aplici direct în afacere cu template-urile și prompturile noastre"
-                },
-                {
-                    "emoji": "📈",
-                    "title": "Scalezi",
-                    "description": "Rezultate vizibile din primele 2 săptămâni"
-                }
-            ]
+        "socialProof": {
+            "title": "Nu e teorie. Magazine reale, comenzi reale.",
+            "statOrders": "comenzi reale",
+            "statValue": "în comenzi livrate",
+            "statCaption": "Comenzi reale, prin magazine construite exact așa. Anonimizate (oraș + produs).",
+            "button": "Vezi magazinul live → decor.ineo.ro",
+            "note": "Magazinul rulează acum la decor.ineo.ro."
         },
-        "beforeAfter": {
-            "title": "Transformarea",
-            "beforeTitle": "Fără Curs",
-            "afterTitle": "Cu Curs",
+        "authors": {
+            "title": "Cine construiește asta",
+            "jeff": {
+                "name": "Jeff",
+                "role": "AI Engineer (ex-IBM)",
+                "description": "Construiește infrastructura AI și magazinele care rulează în spate — viteză, plăți, tracking și automatizări."
+            },
+            "andra": {
+                "name": "Andra",
+                "role": "Social Media & Ads",
+                "description": "Peste 1.000 de video-uri create. Știe ce vinde, ce viralizează și cum se aplică AI-ul în creative."
+            }
+        },
+        "testimonials": {
+            "title": "Ce spun cei care le folosesc",
             "items": [
                 {
-                    "before": "8 ore/săpt creare conținut manual",
-                    "after": "45 min cu AI"
+                    "content": "Am mutat magazinul de pe WordPress și timpul de încărcare a scăzut la jumătate. Conversia a crescut vizibil în prima săptămână.",
+                    "name": "Alexandru M.",
+                    "role": "Magazin de decorațiuni"
                 },
                 {
-                    "before": "Campanii Facebook pe instinct",
-                    "after": "Analiză automată, rapoarte instant"
+                    "content": "Lansam un produs nou într-o zi întreagă. Acum e gata în 20 de minute, cu reclamă pornită.",
+                    "name": "Elena C.",
+                    "role": "Owner ecom"
                 },
                 {
-                    "before": "0 automatizări în business",
-                    "after": "10+ fluxuri automatizate"
-                },
-                {
-                    "before": "Dependent de agenții externe scumpe",
-                    "after": "Totul in-house cu AI"
-                },
-                {
-                    "before": "Fiecare email, factură, postare – manual",
-                    "after": "Automatizat cu Make/Zapier"
+                    "content": "Ne-am extins pe piața din Franța fără să refacem tot. Au tradus inclusiv imaginile — uriaș.",
+                    "name": "Mihai D.",
+                    "role": "Retail online"
                 }
             ]
-        },
-        "valueStack": {
-            "title": "Ce Primești",
-            "items": [
-                {
-                    "label": "6 Module Video Complete",
-                    "value": "1.500 €"
-                },
-                {
-                    "label": "Acces Pe Viață + Update-uri",
-                    "value": "800 €"
-                },
-                {
-                    "label": "100+ Prompturi + Template-uri",
-                    "value": "500 €"
-                },
-                {
-                    "label": "Acces Comunitate Privată",
-                    "value": "600 €/an"
-                },
-                {
-                    "label": "Audit AI Personalizat 1-la-1 (bonus 48h)",
-                    "value": "500 €"
-                },
-                {
-                    "label": "Sesiuni Live Q&A cu Instructorii",
-                    "value": "400 €"
-                },
-                {
-                    "label": "Certificat de Absolvire",
-                    "value": "200 €"
-                }
-            ],
-            "totalLabel": "Valoare totală",
-            "totalValue": "4.500 €",
-            "payLabel": "Tu plătești",
-            "payValue": "2.200 €"
         },
         "faq": {
-            "title": "Întrebări Frecvente",
+            "title": "Întrebări frecvente",
             "items": [
                 {
-                    "q": "Nu am cunoștințe tehnice – pot să fac față?",
-                    "a": "Da! Cursul este creat 100% pentru non-tehnici. Folosim doar platforme \"no-code\" gen Make sau Zapier, și interfețe intuitive."
+                    "q": "Chiar în 15-30 de minute un produs?",
+                    "a": "Da — de la idee la pagină live, gata de vânzare. Reclamele pornesc într-un interval similar."
                 },
                 {
-                    "q": "Nu prea am timp liber.",
-                    "a": "Modulele sunt scurte (20-30 minute) și direct acționabile. Mai mult, ce înveți vineri te ajută să economisești 5 ore luni dimineața."
+                    "q": "Am nevoie de programator?",
+                    "a": "Nu. Construim și operăm noi, cu AI. Tu decizi ce vinzi."
                 },
                 {
-                    "q": "AI se schimbă rapid – cursul va fi perimat?",
-                    "a": "Ai acces pe VIAȚĂ la conținut, inclusiv la TOATE actualizările viitoare lansate. Când apar unelte noi, adăugăm module noi."
+                    "q": "Pe ce rulează magazinul?",
+                    "a": "Pe un stack modern, rapid (nu WordPress) — optimizat pentru viteză și conversie."
                 },
                 {
-                    "q": "De ce 2.200 EUR și nu un curs de 50 EUR de pe Udemy?",
-                    "a": "Cursurile generice îți vând teorie. Aici primești un sistem integrat business + marketing, template-uri dovedite, suport într-o comunitate restrânsă și o experiență dictată de un inginer IBM."
+                    "q": "Cum stă treaba cu reclamele?",
+                    "a": "Ai un expert AI cu acces direct în Meta Ads și Google Ads — te sfătuiește și îți face campania dacă vrei."
                 },
                 {
-                    "q": "Am mai cumpărat cursuri online și nu le-am terminat.",
-                    "a": "Cursul nostru e bazat pe cohorte cu deadline-uri, sesiuni live și o comunitate care te ține accountable. Nu ești singur."
+                    "q": "Chiar traduceți și imaginile?",
+                    "a": "Da. Text de site + textul din imagini, ca să te extinzi pe altă piață fără să refaci totul."
                 },
                 {
-                    "q": "Există garanție?",
-                    "a": "Da! Garanție 14 zile, 100% rambursabil. Parcurgi primele 2 module, dacă nu ești convins, primești banii înapoi."
+                    "q": "Cum decurge colaborarea?",
+                    "a": "În două etape. La început lucrezi prin noi (Tier 1 — done-for-you): construim, pornim reclamele și operăm totul. Apoi te învățăm să folosești AI-ul și îți predăm magazinul (Tier 2 — operator): îl conduci singur, cu expertul AI lângă tine."
+                },
+                {
+                    "q": "Cât costă?",
+                    "a": "Discutăm la lansare, pe nevoia ta. Acum strângem lista de așteptare — intri primul."
                 }
             ]
         },
         "footer": {
-            "cta": "Nu rămâne în urmă. Învață AI Acum.",
-            "ctaButton": "Înscrie-te pe Platforma de Cursuri",
+            "cta": "Gata să lansezi în minute, nu în luni?",
             "copyright": "© 2026 Toate drepturile rezervate."
         }
     },
     "en": {
+        "waitlist": {
+            "placeholder": "Your email address",
+            "cta": "Join the list",
+            "note": "No card, no commitment. We'll notify you first at launch.",
+            "success": "You're on the list! 🎉 We'll notify you first when we open.",
+            "error": "Check your email address and try again."
+        },
         "hero": {
-            "headline": "Transform Your Business and Life with Artificial Intelligence",
-            "subHeadline": "Automate ad analysis, create viral content in seconds, and optimize your costs. Learn from industry experts.",
-            "priceOld": "€5,700",
-            "priceNew": "€2,200",
-            "cta": "Reserve Your Spot Now",
-            "scarcityWarning": "* Offer valid for the current cohort only. Limited spots available."
-        },
-        "features": {
-            "title": "What You Will Learn",
-            "marketing": {
-                "title": "Marketing & Social Media",
-                "items": [
-                    "Infinite post idea generation",
-                    "Attention-grabbing reels scripts",
-                    "Copywriting that sells",
-                    "Professional video generation"
-                ]
-            },
-            "business": {
-                "title": "Business Automation",
-                "items": [
-                    "Automated AI analysis for Facebook & Google Ads",
-                    "Integrations and changes managed by AI agents",
-                    "Workflow optimization"
-                ]
-            }
-        },
-        "fomo": {
-            "banner": "Attention: Only 8 spots left for the 1-on-1 personalized audit bonus.",
-            "socialProof": "Join those who are already using AI to save dozens of hours every week."
-        },
-        "authors": {
-            "title": "Who We Are",
-            "jeff": {
-                "name": "Jeff",
-                "role": "AI Engineer (ex-IBM)",
-                "description": "Expert in AI infrastructures, complex automations, and integrating technology into business processes for revenue growth."
-            },
-            "andra": {
-                "name": "Andra",
-                "role": "Social Media Creator",
-                "description": "Over 1,000 videos created. Expert in algorithms, virality, and applying AI in the visual creative process."
-            }
-        },
-        "testimonials": {
-            "title": "What Our Students Say",
-            "items": [
+            "badge": "AI Commerce",
+            "headline": "Your online store, built with AI. Launch products and ads in minutes — not weeks.",
+            "subHeadline": "From idea to a live product page in 15-30 minutes. Ads running in another 15-30. Iterate fast, learn what sells, and scale — no developer, no agency, no months of waiting.",
+            "promises": [
                 {
-                    "content": "I reduced content creation time from 8 hours to 45 minutes per week. This investment paid for itself 10x already. Absolutely transformative for my agency.",
-                    "name": "Alexandru M.",
-                    "role": "Founder, Digital Agency"
+                    "emoji": "⚡",
+                    "title": "New product in 15-30 min",
+                    "desc": "From idea to a live page, ready to sell."
                 },
                 {
-                    "content": "Facebook campaign analysis used to take me days. Now, the AI system shows me exactly the winning ads and cuts the budget on the losers automatically.",
-                    "name": "Elena C.",
-                    "role": "E-commerce Owner"
+                    "emoji": "🎯",
+                    "title": "Ads in 15-30 min",
+                    "desc": "Campaign + tracking, ready to bring traffic."
                 },
                 {
-                    "content": "I had zero technical background. The course is structured so logically that in week one, I already had a viral AI-generated video script hitting 10k views.",
-                    "name": "Mihai D.",
-                    "role": "Content Creator"
+                    "emoji": "🔁",
+                    "title": "Iterate in a day",
+                    "desc": "Test, keep what sells, cut what doesn't."
                 }
             ]
         },
-        "guarantee": {
-            "title": "100% Risk-Free 14-Day Guarantee",
-            "subtitle": "Test it on your own business",
-            "description": "We are so confident in the value of this course that we offer a 14-day trial. If you are not convinced after the first 2 modules that this program will automate your business, we will return every cent - no questions asked.",
-            "badge": "14-Day Money-Back Guarantee"
+        "fomo": {
+            "banner": "The waitlist is open — limited spots for the first wave.",
+            "socialProof": "Ecom stores that launch in days, not months. Built and run with AI."
+        },
+        "painPoints": {
+            "title": "Sound familiar?",
+            "subtitle": "If any of this is you, that's exactly what we fix.",
+            "items": [
+                {
+                    "emoji": "🐌",
+                    "problem": "You have a WordPress store that moves painfully slow.",
+                    "solution": "A store that's fast by design — sports-car speed, good Google score, fewer lost customers."
+                },
+                {
+                    "emoji": "🎯",
+                    "problem": "You pay for Google and Facebook Ads, but you're not sure your pixel setup is right.",
+                    "solution": "Correct tracking from day one: Meta Pixel + server-side CAPI + Google Analytics, so you know exactly which ad makes money."
+                },
+                {
+                    "emoji": "🌍",
+                    "problem": "You want to expand to a new market, but translating everything professionally is expensive and slow.",
+                    "solution": "We translate everything, including the text inside images. Same store, new market, in days."
+                },
+                {
+                    "emoji": "⏳",
+                    "problem": "You wait weeks on a developer or agency for every product or ad.",
+                    "solution": "With AI: product live in 15-30 min, ad running in another 15-30. Iterate today, not next month."
+                }
+            ]
+        },
+        "howItWorks": {
+            "title": "From idea to sale, the same day",
+            "steps": [
+                {
+                    "emoji": "💡",
+                    "title": "Idea",
+                    "description": "You tell me what you want to sell."
+                },
+                {
+                    "emoji": "🛒",
+                    "title": "Product live",
+                    "description": "A full page on the site in 15-30 min."
+                },
+                {
+                    "emoji": "🎯",
+                    "title": "Ads running",
+                    "description": "Campaign + correct tracking in another 15-30 min."
+                },
+                {
+                    "emoji": "🔁",
+                    "title": "Iterate",
+                    "description": "See the data, keep what sells, scale."
+                }
+            ]
+        },
+        "translation": {
+            "title": "Sell in any market. We translate the images too.",
+            "subtitle": "Drag the slider — the same image, translated automatically. Not just the site text, but the text inside the images.",
+            "leftLabel": "🇷🇴 Română",
+            "rightLabel": "🇬🇧 English",
+            "note": "Real example from a store we run. Launch in a new market without rebuilding all your content from scratch."
+        },
+        "aiStudio": {
+            "title": "An AI marketing studio at your fingertips",
+            "subtitle": "Ads, creatives, and product images — generated with AI, with direct access to your Meta Ads and Google Ads accounts.",
+            "items": [
+                {
+                    "emoji": "🖼️",
+                    "title": "Drop a photo, get AI variants",
+                    "desc": "No more fishing for photos or doing your own photoshoots. Give one product image and AI generates variants ready for the site and ads."
+                },
+                {
+                    "emoji": "🧠",
+                    "title": "Consult it anytime",
+                    "desc": "Ask anything about campaigns, budget, audiences, or creatives — it answers like a specialist who knows your account."
+                },
+                {
+                    "emoji": "🚀",
+                    "title": "It builds the campaign, if you want",
+                    "desc": "From scratch: structure, targeting, copy, creatives. You just approve."
+                },
+                {
+                    "emoji": "🔗",
+                    "title": "Direct access to Meta & Google Ads",
+                    "desc": "No manual export-import; it works directly inside your ad accounts."
+                },
+                {
+                    "emoji": "📊",
+                    "title": "Optimizes on data, not gut",
+                    "desc": "It sees what converts through correct tracking and moves budget where it brings sales."
+                }
+            ]
+        },
+        "features": {
+            "title": "Two things you get from day one",
+            "marketing": {
+                "title": "⚡ Launch in minutes, not weeks",
+                "items": [
+                    "New product on the site in 15-30 min",
+                    "Ads running in another 15-30 min",
+                    "Iterate fast: test, learn, scale",
+                    "No developer, no agency"
+                ]
+            },
+            "business": {
+                "title": "🛡️ The conversion machinery, included",
+                "items": [
+                    "Sports-car loading speed",
+                    "Abandoned-cart recovery (exit-intent + auto email)",
+                    "Native payments: Revolut, Apple Pay, Google Pay, card, COD",
+                    "Admin panel with orders and reports"
+                ]
+            }
         },
         "curriculum": {
-            "title": "What You Will Learn",
+            "title": "Everything a serious store needs, already included",
             "modules": [
                 {
-                    "title": "MODULE 1: AI Fundamentals & Mindset",
+                    "title": "🏎️ Speed & performance",
                     "items": [
-                        "How AI works (no-code)",
-                        "Essential tools (ChatGPT, Claude, Gemini, Perplexity)",
-                        "Why 80% use AI wrong and how to avoid it"
+                        "A store that flies, optimized for speed",
+                        "Good Google score → fewer lost customers",
+                        "Mobile-first: most ecom traffic is on phones"
                     ]
                 },
                 {
-                    "title": "MODULE 2: Prompt Engineering & Productivity",
+                    "title": "🚪 Abandoned-cart recovery",
                     "items": [
-                        "The perfect prompt formula",
-                        "AI as a personal assistant: email, calendar, research",
-                        "Automating daily tasks"
+                        "Catch the customer who's leaving (exit-intent)",
+                        "Bring them back with email + automatic discount",
+                        "Recover sales that were otherwise lost"
                     ]
                 },
                 {
-                    "title": "MODULE 3: AI Marketing & Social Media",
+                    "title": "💳 Payments & checkout",
                     "items": [
-                        "Infinite content idea generation",
-                        "Reels/TikTok scripts that go viral",
-                        "Persuasive copy & descriptions",
-                        "AI video generation (Runway, Sora, HeyGen)"
+                        "Natively integrated with Revolut, Apple Pay and Google Pay",
+                        "Card and cash-on-delivery included",
+                        "One-tap checkout, zero friction"
                     ]
                 },
                 {
-                    "title": "MODULE 4: Business Automation",
+                    "title": "🌍 Multi-market & translation",
                     "items": [
-                        "No-code automation with Make.com and Zapier",
-                        "AI Agents working for you",
-                        "Integrating AI in existing workflows",
-                        "CRM and sales automation"
+                        "Sell in RO and other markets with the same store",
+                        "We translate everything, including text in images",
+                        "Expansion in days, not months"
                     ]
                 },
                 {
-                    "title": "MODULE 5: Paid Ads & AI Analytics",
+                    "title": "📊 Admin & analytics",
                     "items": [
-                        "Automated Facebook & Google Ads analysis",
-                        "Ad generation (copy + creatives)",
-                        "Data-driven budget optimization"
+                        "Orders, recovery rate, top products — in one place",
+                        "See what's happening without asking anyone",
+                        "GDPR & cookie consent compliant"
                     ]
                 },
                 {
-                    "title": "MODULE 6: Implementation & Scaling",
+                    "title": "🎯 Ads & correct tracking",
                     "items": [
-                        "Building a complete AI ecosystem in your business",
-                        "KPIs & ROI measurement",
-                        "What's next: AI trends 2025-2026",
-                        "Final implementation audit"
+                        "Meta Pixel + server-side CAPI + Google Analytics",
+                        "Set up properly from day one",
+                        "You know exactly which ad makes money"
+                    ]
+                }
+            ]
+        },
+        "beforeAfter": {
+            "title": "Before vs. after",
+            "beforeTitle": "Before",
+            "afterTitle": "After",
+            "items": [
+                {
+                    "before": "Weeks with the agency for every change",
+                    "after": "Product live in 15-30 min"
+                },
+                {
+                    "before": "Slow WordPress site",
+                    "after": "Sports-car speed"
+                },
+                {
+                    "before": "You don't know if the pixel is set up right",
+                    "after": "Correct tracking, you see what sells"
+                },
+                {
+                    "before": "Expanding to a new market = expensive and slow",
+                    "after": "New market in days, images translated"
+                },
+                {
+                    "before": "Ads made on gut feeling",
+                    "after": "AI ads optimized on data"
+                }
+            ]
+        },
+        "tiers": {
+            "title": "How working together goes",
+            "subtitle": "You move from \"speak through me\" to \"you run it\", at your own pace.",
+            "items": [
+                {
+                    "tag": "Tier 1 · Done-for-you",
+                    "title": "You speak through me",
+                    "desc": "At first you work through us: we build your store, launch the ads, and run everything. You just tell us what you want to sell.",
+                    "points": [
+                        "We build and launch the store for you",
+                        "We start and manage the ads",
+                        "Zero technical work on your side"
+                    ]
+                },
+                {
+                    "tag": "Tier 2 · Operator",
+                    "title": "You run it",
+                    "desc": "As you get comfortable, we teach you to use the AI and hand the store over. You run it yourself, with the AI expert beside you.",
+                    "points": [
+                        "We teach you to use the AI step by step",
+                        "You get full control of the store",
+                        "The store is yours — you're not locked in"
                     ]
                 }
             ]
         },
         "targetAudience": {
-            "title": "Who Is This Course For?",
-            "forTitle": "✅ This course IS for you if:",
+            "title": "Who it's for",
+            "forTitle": "✅ It's for you if:",
             "forItems": [
-                "You're an entrepreneur looking to scale without hiring massive teams.",
-                "You spend too much time on manual tasks (content, emails, invoicing).",
-                "You want to use AI for ads and marketing that actually bring clients.",
-                "You're ready to implement these techniques right now."
+                "You have (or want) an online store and want to move fast.",
+                "You do dropshipping or test products and want to launch today, not in a month.",
+                "You pay for ads and want to be sure the tracking is correct.",
+                "You want to expand to a new market without big translation costs."
             ],
-            "notForTitle": "❌ This course is NOT for you if:",
+            "notForTitle": "❌ It's NOT for you if:",
             "notForItems": [
-                "You're looking for an overnight 'get-rich-quick' scheme.",
-                "You only want deep programming theory (this course is no-code).",
-                "You do not have a business, a freelance job, or clear implementation plans."
+                "You're looking for a 'get-rich-quick' scheme without selling anything real.",
+                "You only want a presentation site, with no intent to sell.",
+                "You're not willing to test and iterate."
             ]
         },
-        "howItWorks": {
-            "title": "How It Works",
-            "steps": [
-                {
-                    "emoji": "🎓",
-                    "title": "Learn",
-                    "description": "Access video modules anytime, at your own pace (20–30 min/lesson)"
-                },
-                {
-                    "emoji": "⚡",
-                    "title": "Implement",
-                    "description": "Apply directly in your business with our templates and prompts"
-                },
-                {
-                    "emoji": "📈",
-                    "title": "Scale",
-                    "description": "Visible results within the first 2 weeks"
-                }
-            ]
+        "socialProof": {
+            "title": "Not theory. Real stores, real orders.",
+            "statOrders": "real orders",
+            "statValue": "in orders delivered",
+            "statCaption": "Real orders, through stores built exactly like this. Anonymized (city + product).",
+            "button": "See the live store → decor.ineo.ro",
+            "note": "The store is running right now at decor.ineo.ro."
         },
-        "beforeAfter": {
-            "title": "The Transformation",
-            "beforeTitle": "Without Course",
-            "afterTitle": "With Course",
+        "authors": {
+            "title": "Who's building this",
+            "jeff": {
+                "name": "Jeff",
+                "role": "AI Engineer (ex-IBM)",
+                "description": "Builds the AI infrastructure and the stores that run behind the scenes — speed, payments, tracking, and automation."
+            },
+            "andra": {
+                "name": "Andra",
+                "role": "Social Media & Ads",
+                "description": "Over 1,000 videos created. Knows what sells, what goes viral, and how AI applies to creatives."
+            }
+        },
+        "testimonials": {
+            "title": "What people using it say",
             "items": [
                 {
-                    "before": "8 hrs/week creating content manually",
-                    "after": "45 min with AI"
+                    "content": "I moved my store off WordPress and load time dropped by half. Conversion went up noticeably in the first week.",
+                    "name": "Alexandru M.",
+                    "role": "Home decor store"
                 },
                 {
-                    "before": "Facebook campaigns run on instinct",
-                    "after": "Automated analysis, instant reports"
+                    "content": "Launching a new product used to take a whole day. Now it's ready in 20 minutes, with the ad running.",
+                    "name": "Elena C.",
+                    "role": "Ecom owner"
                 },
                 {
-                    "before": "0 automations in business",
-                    "after": "10+ automated workflows"
-                },
-                {
-                    "before": "Dependent on expensive agencies",
-                    "after": "Everything in-house with AI"
-                },
-                {
-                    "before": "Every email, invoice, post – manual",
-                    "after": "Automated with Make/Zapier"
+                    "content": "We expanded to the French market without rebuilding everything. They translated the images too — huge.",
+                    "name": "Mihai D.",
+                    "role": "Online retail"
                 }
             ]
-        },
-        "valueStack": {
-            "title": "What You Get",
-            "items": [
-                {
-                    "label": "6 Complete Video Modules",
-                    "value": "€1,500"
-                },
-                {
-                    "label": "Lifetime Access + Updates",
-                    "value": "€800"
-                },
-                {
-                    "label": "100+ Prompts + Templates",
-                    "value": "€500"
-                },
-                {
-                    "label": "Private Community Access",
-                    "value": "€600/yr"
-                },
-                {
-                    "label": "1-on-1 AI Audit (48h bonus)",
-                    "value": "€500"
-                },
-                {
-                    "label": "Live Q&A Sessions w/ Instructors",
-                    "value": "€400"
-                },
-                {
-                    "label": "Certificate of Completion",
-                    "value": "€200"
-                }
-            ],
-            "totalLabel": "Total Value",
-            "totalValue": "€4,500",
-            "payLabel": "You Pay",
-            "payValue": "€2,200"
         },
         "faq": {
-            "title": "Frequently Asked Questions",
+            "title": "Frequently asked questions",
             "items": [
                 {
-                    "q": "I have no technical knowledge - can I do this?",
-                    "a": "Yes! The entire course is designed for non-technical people. We exclusively use 'no-code' platforms like Make or Zapier."
+                    "q": "Really a product in 15-30 minutes?",
+                    "a": "Yes — from idea to a live page, ready to sell. Ads start in a similar window."
                 },
                 {
-                    "q": "I don't have much free time.",
-                    "a": "The modules are short (20-30 mins) and actionable. What you learn on Friday saves you 5 hours by Monday."
+                    "q": "Do I need a programmer?",
+                    "a": "No. We build and run it, with AI. You decide what to sell."
                 },
                 {
-                    "q": "AI changes fast - won't this become outdated?",
-                    "a": "You get LIFETIME access, including ALL future module updates. When new tools launch, we add new material."
+                    "q": "What does the store run on?",
+                    "a": "A modern, fast stack (not WordPress) — optimized for speed and conversion."
                 },
                 {
-                    "q": "Why 2,200 EUR and not a 50 EUR Udemy course?",
-                    "a": "Generic courses sell theory. Here you get an integrated business/marketing system, proven templates, small community support, and expertise designed by an IBM engineer."
+                    "q": "How do the ads work?",
+                    "a": "You get an AI expert with direct access to Meta Ads and Google Ads — it advises you and builds the campaign if you want."
                 },
                 {
-                    "q": "I've bought courses before and never finished them.",
-                    "a": "Our course is cohort-based with deadlines, live sessions, and a community that keeps you accountable. You're not alone."
+                    "q": "Do you really translate the images?",
+                    "a": "Yes. Site text + the text inside images, so you can expand to a new market without rebuilding everything."
                 },
                 {
-                    "q": "Is there a guarantee?",
-                    "a": "Yes! A 14-day, 100% money-back guarantee. Complete the first 2 modules, and if you're not convinced, you get your money back."
+                    "q": "How does working together go?",
+                    "a": "In two stages. At first you work through us (Tier 1 — done-for-you): we build, launch the ads, and run everything. Then we teach you to use the AI and hand the store over (Tier 2 — operator): you run it yourself, with the AI expert beside you."
+                },
+                {
+                    "q": "How much does it cost?",
+                    "a": "We discuss it at launch, based on your needs. Right now we're gathering the waitlist — you get in first."
                 }
             ]
         },
         "footer": {
-            "cta": "Don't fall behind. Learn AI Now.",
-            "ctaButton": "Enroll on the Course Platform",
+            "cta": "Ready to launch in minutes, not months?",
             "copyright": "© 2026 All rights reserved."
         }
     }

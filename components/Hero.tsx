@@ -2,11 +2,15 @@
 
 import React from 'react';
 import { useLanguage } from '../app/i18n/LanguageContext';
-import { Sparkles, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import WaitlistForm from './WaitlistForm';
 import styles from './styles/Hero.module.css';
+
+type Promise = { emoji: string; title: string; desc: string };
 
 export default function Hero() {
   const { t } = useLanguage();
+  const promises: Promise[] = t("hero.promises") || [];
 
   return (
     <section className={styles.heroSection}>
@@ -19,7 +23,7 @@ export default function Hero() {
       <div className={`container relative z-10 ${styles.heroContent}`}>
         <div className={`${styles.badge} animate-fade-in-up`}>
           <Sparkles size={16} className="text-cyan" />
-          <span>AI Business Mastery</span>
+          <span>{t("hero.badge")}</span>
         </div>
 
         <h1 className={`${styles.heroTitle} animate-fade-in-up delay-1`}>
@@ -30,24 +34,20 @@ export default function Hero() {
           {t("hero.subHeadline")}
         </p>
 
-        <div className={`${styles.pricingBox} animate-fade-in-up delay-3`}>
-          <div className={styles.priceStrike}>{t("hero.priceOld")}</div>
-          <div className={`${styles.priceCurrent} text-gradient`}>{t("hero.priceNew")}</div>
+        <div className={`${styles.formWrapper} animate-fade-in-up delay-3`}>
+          <WaitlistForm source="hero" />
         </div>
 
-        <div className={`${styles.ctaWrapper} animate-fade-in-up delay-3`}>
-          <a href="#enroll" className={`btn-primary ${styles.ctaBtn}`}>
-            {t("hero.cta")}
-            <ArrowRight size={20} />
-          </a>
-          <p className={styles.scarcityText}>
-            <Zap size={14} className="text-accent-purple" />
-            {t("hero.scarcityWarning")}
-          </p>
-          <p className={styles.guaranteeSubtext}>
-            <ShieldCheck size={14} className="text-secondary" />
-            {t("guarantee.badge") || "14-Day Money-Back Guarantee"}
-          </p>
+        <div className={`${styles.promises} animate-fade-in-up delay-3`}>
+          {promises.map((p, idx) => (
+            <div key={idx} className={styles.promise}>
+              <span className={styles.promiseEmoji}>{p.emoji}</span>
+              <div>
+                <div className={styles.promiseTitle}>{p.title}</div>
+                <div className={styles.promiseDesc}>{p.desc}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
