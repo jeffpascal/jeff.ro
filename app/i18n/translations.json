@@ -263,7 +263,6 @@
             "notForTitle": "❌ Nu e pentru tine dacă:",
             "notForItems": [
                 "Cauți «îmbogățire rapidă» fără să vinzi nimic real.",
-                "Vrei doar un site de prezentare, fără intenție de vânzare.",
                 "Nu ești dispus să testezi și să iterezi."
             ]
         },
@@ -610,7 +609,6 @@
             "notForTitle": "❌ It's NOT for you if:",
             "notForItems": [
                 "You're looking for a 'get-rich-quick' scheme without selling anything real.",
-                "You only want a presentation site, with no intent to sell.",
                 "You're not willing to test and iterate."
             ]
         },
