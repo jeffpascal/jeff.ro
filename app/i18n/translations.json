@@ -2,10 +2,12 @@
     "ro": {
         "waitlist": {
             "placeholder": "Adresa ta de email",
+            "phonePlaceholder": "Număr de telefon",
+            "storePlaceholder": "Ai deja un magazin? Lasă link-ul sau câteva detalii (opțional)",
             "cta": "Intră pe listă",
             "note": "Fără card, fără obligații. Te anunțăm primul la lansare.",
             "success": "Ești pe listă! 🎉 Te anunțăm primul când deschidem.",
-            "error": "Verifică adresa de email și încearcă din nou."
+            "error": "Verifică emailul și telefonul, apoi încearcă din nou."
         },
         "hero": {
             "badge": "AI Commerce",
@@ -347,10 +349,12 @@
     "en": {
         "waitlist": {
             "placeholder": "Your email address",
+            "phonePlaceholder": "Phone number",
+            "storePlaceholder": "Already have a store? Drop the link or a few details (optional)",
             "cta": "Join the list",
             "note": "No card, no commitment. We'll notify you first at launch.",
             "success": "You're on the list! 🎉 We'll notify you first when we open.",
-            "error": "Check your email address and try again."
+            "error": "Check your email and phone, then try again."
         },
         "hero": {
             "badge": "AI Commerce",

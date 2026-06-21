@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { sendEmail } from "../../lib/resend";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_RE = /^[+]?[\d().\s-]{8,}$/;
 
 function esc(s: string): string {
   return s.replace(/[<>&"]/g, (c) =>
@@ -13,6 +14,8 @@ export async function POST(request: Request) {
   try {
     const body = await request.json().catch(() => ({}));
     const email = String(body?.email ?? "").trim().toLowerCase();
+    const phone = String(body?.phone ?? "").trim();
+    const store = String(body?.store ?? "").trim().slice(0, 1000);
     const source = String(body?.source ?? "hero").slice(0, 40);
     const lang = String(body?.lang ?? "ro").slice(0, 5);
 
@@ -20,14 +23,25 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Email invalid" }, { status: 400 });
     }
 
+    const phoneDigits = (phone.match(/\d/g) || []).length;
+    if (!phone || phone.length > 40 || !PHONE_RE.test(phone) || phoneDigits < 8) {
+      return NextResponse.json({ error: "Telefon invalid" }, { status: 400 });
+    }
+
     const to = process.env.WAITLIST_TO || "unicjustonline@gmail.com";
     const from = process.env.WAITLIST_FROM || "AI Commerce <comenzi@ineo.annops.com>";
     const when = new Date().toISOString();
+
+    const storeRow = store
+      ? `<p style="margin:0 0 4px"><strong>Magazin actual:</strong> ${esc(store)}</p>`
+      : "";
 
     const html = `
       <div style="font-family:system-ui,sans-serif;line-height:1.6">
         <h2 style="margin:0 0 8px">🎉 Înscriere nouă pe lista de așteptare</h2>
         <p style="margin:0 0 4px"><strong>Email:</strong> ${esc(email)}</p>
+        <p style="margin:0 0 4px"><strong>Telefon:</strong> ${esc(phone)}</p>
+        ${storeRow}
         <p style="margin:0 0 4px"><strong>Sursă:</strong> ${esc(source)} · <strong>Limbă:</strong> ${esc(lang)}</p>
         <p style="margin:0;color:#666"><strong>Când:</strong> ${esc(when)}</p>
       </div>`;

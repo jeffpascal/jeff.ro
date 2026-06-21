@@ -7,16 +7,24 @@ import styles from "./styles/WaitlistForm.module.css";
 
 type Props = { source?: string };
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Loose international phone check: at least 8 digits, allows + ( ) - and spaces.
+const PHONE_RE = /^[+]?[\d().\s-]{8,}$/;
+
 export default function WaitlistForm({ source = "hero" }: Props) {
   const { t, language } = useLanguage();
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [store, setStore] = useState("");
   const [state, setState] = useState<"idle" | "loading" | "done" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (state === "loading" || state === "done") return;
-    const value = email.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+    const emailValue = email.trim();
+    const phoneValue = phone.trim();
+    const digits = (phoneValue.match(/\d/g) || []).length;
+    if (!EMAIL_RE.test(emailValue) || !PHONE_RE.test(phoneValue) || digits < 8) {
       setState("error");
       return;
     }
@@ -25,7 +33,13 @@ export default function WaitlistForm({ source = "hero" }: Props) {
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: value, source, lang: language }),
+        body: JSON.stringify({
+          email: emailValue,
+          phone: phoneValue,
+          store: store.trim(),
+          source,
+          lang: language,
+        }),
       });
       setState(res.ok ? "done" : "error");
     } catch {
@@ -42,9 +56,13 @@ export default function WaitlistForm({ source = "hero" }: Props) {
     );
   }
 
+  const clearError = () => {
+    if (state === "error") setState("idle");
+  };
+
   return (
     <form className={styles.form} onSubmit={handleSubmit} noValidate>
-      <div className={styles.inputRow}>
+      <div className={styles.fields}>
         <input
           type="email"
           className={styles.input}
@@ -52,10 +70,33 @@ export default function WaitlistForm({ source = "hero" }: Props) {
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
-            if (state === "error") setState("idle");
+            clearError();
           }}
           aria-label={t("waitlist.placeholder")}
+          autoComplete="email"
           required
+        />
+        <input
+          type="tel"
+          className={styles.input}
+          placeholder={t("waitlist.phonePlaceholder")}
+          value={phone}
+          onChange={(e) => {
+            setPhone(e.target.value);
+            clearError();
+          }}
+          aria-label={t("waitlist.phonePlaceholder")}
+          autoComplete="tel"
+          required
+        />
+        <textarea
+          className={styles.textarea}
+          placeholder={t("waitlist.storePlaceholder")}
+          value={store}
+          onChange={(e) => setStore(e.target.value)}
+          aria-label={t("waitlist.storePlaceholder")}
+          rows={2}
+          maxLength={1000}
         />
         <button type="submit" className={`btn-primary ${styles.button}`} disabled={state === "loading"}>
           {state === "loading" ? (
