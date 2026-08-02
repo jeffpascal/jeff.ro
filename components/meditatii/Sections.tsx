@@ -23,12 +23,13 @@ export function Section({ label, id, children }: SectionProps) {
 
 const PAIN_QUOTES = [
   "Nu știu ce AI să folosesc. ChatGPT, Claude, Gemini… par toate la fel.",
-  "Plătesc abonamente, dar în firmă nu se vede nicio diferență.",
-  "ChatGPT îmi răspunde frumos și general. Adică inutil.",
   "Toată lumea vorbește de agenți și automatizări. Eu cu ce încep?",
-  "Trebuie să-mi antrenez propriul AI? Nu costă o avere?",
-  "Primesc idei bune, dar munca tot la mine rămâne.",
+  "ChatGPT îmi răspunde frumos și general. Adică inutil.",
+  "N-am buget de agenție, de programator sau de om de marketing.",
   "Aș porni ceva al meu, dar mă blochez la marketing și la unelte.",
+  "Mi-e frică să nu stric ceva sau să arunc banii aiurea.",
+  "Primesc idei bune, dar munca tot la mine rămâne.",
+  "Simt că toți se mișcă mai repede decât mine cu AI-ul ăsta.",
   "Cursurile pe care le-am găsit nu răspund la cazul meu.",
 ];
 
@@ -70,7 +71,8 @@ export function WhatIs() {
         </p>
         <p>
           Exact așa funcționează și astea — doar că problema nu e la
-          matematică, ci în afacerea ta.
+          matematică, ci în afacerea ta. Și fix asta le lipsește celor mai
+          mulți: nu încă un curs de privit, ci cineva care lucrează cu ei.
         </p>
       </div>
       <div className={styles.compare}>
@@ -299,6 +301,10 @@ const FAQ_ITEMS: Array<[string, string]> = [
   [
     "Cât mă costă uneltele AI?",
     "De cele mai multe ori, la început, ajunge un singur abonament — sau chiar variantele gratuite. Stabilim împreună ce merită plătit pentru cazul tău, înainte să plătești ceva.",
+  ],
+  [
+    "N-am buget mare. Are sens pentru mine?",
+    "Tocmai atunci are cel mai mult sens. AI-ul face azi o parte din treaba pentru care altfel ai plăti o agenție, un programator sau un om în plus — iar la meditații înveți să i-o ceri tu, pentru cazul tău.",
   ],
   [
     "Se înregistrează sesiunile?",
