@@ -80,7 +80,10 @@ async function sendConfirmation(args: {
   if (!session) return;
   const from =
     process.env.CONFIRM_FROM || "Jeff — Meditații AI <meditatii@ineo.annops.com>";
-  const replyTo = process.env.WAITLIST_TO || "jeffpascal96@gmail.com";
+  const replyTo = (process.env.WAITLIST_TO || "jeffpascal96@gmail.com")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
   const when = formatSessionDate(session.date);
 
   const startUtc = new Date(session.date);
