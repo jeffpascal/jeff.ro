@@ -136,13 +136,13 @@ export function DemoSession() {
         chiar funcționează. Fără tăieturi, fără slide-uri pregătite dinainte.
       </p>
       <div className={styles.terminal}>
-        <p><span className={styles.tDim}>—</span> „Vreau AI în restaurantul meu. Am auzit că-mi trebuie un agent coordonator.”</p>
-        <p><span className={styles.tDim}>—</span> Stai puțin. Ce vrei să se întâmple, concret?</p>
-        <p><span className={styles.tDim}>—</span> „Să văd cum ar arăta terasa renovată. Și mai multe rezervări.”</p>
-        <p><span className={styles.tRed}>✎ agent coordonator → nu e nevoie de așa ceva</span></p>
-        <p><span className={styles.tBlue}>✓</span> brief: 3 randări ale terasei + pagină de rezervări</p>
-        <p><span className={styles.tBlue}>✓</span> construit live: pagina, publicată pe internet</p>
-        <p><span className={styles.tBlue}>✓</span> prima reclamă: draft, gata de pornit</p>
+        <p><span className={styles.tDim}>—</span> „Am o idee de afacere, dar nu știu de unde să încep.”</p>
+        <p><span className={styles.tDim}>—</span> Ce ar trebui să existe ca s-o poți vinde mâine?</p>
+        <p><span className={styles.tDim}>—</span> „O pagină, cred. Și un loc unde să-mi lase oamenii datele.”</p>
+        <p><span className={styles.tRed}>✎ „îmi trebuie un programator” → nu e nevoie</span></p>
+        <p><span className={styles.tBlue}>✓</span> brief: pagina + formular + unde ajung datele</p>
+        <p><span className={styles.tBlue}>✓</span> construit live: publicat pe internet, cu adresă reală</p>
+        <p><span className={styles.tBlue}>✓</span> audit: îți scrie pe Telegram la fiecare înscriere nouă</p>
       </div>
       <p className={styles.terminalCaption}>
         * metoda, comprimată. La sesiune o facem live, pe cazul ales din grup.
@@ -332,6 +332,7 @@ export function ForWho() {
             <ul className={styles.spreadList}>
               <li>Cauți îmbogățire rapidă sau venit pasiv, fără muncă.</li>
               <li>Vrei doar noutăți și tool-uri, fără să aplici pe nimic.</li>
+              <li>Vrei să-ți dau eu soluția de-a gata, fără să lucrezi tu pe ea.</li>
             </ul>
           </div>
         </div>
