@@ -22,7 +22,7 @@ export const sessions: Session[] = [
     title: "Sesiunea deschisă: de la idee spusă cu voce tare, la pagină publicată",
     summary:
       "Pe un caz ales din grup: clarificăm problema, alegem unealta și construim live o pagină publicată pe internet, plus prima reclamă draft.",
-    date: "2026-08-13T19:00:00+03:00",
+    date: "2026-08-11T19:00:00+03:00",
     durationMin: 75,
     format: "online",
     priceLei: 0,

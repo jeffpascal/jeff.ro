@@ -225,7 +225,10 @@ export async function POST(request: Request) {
       }
     }
 
-    const to = process.env.WAITLIST_TO || "jeffpascal96@gmail.com";
+    const to = (process.env.WAITLIST_TO || "jeffpascal96@gmail.com")
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
     const from = process.env.WAITLIST_FROM || "Meditații AI <comenzi@ineo.annops.com>";
 
     const row = (label: string, value: string) =>
@@ -252,7 +255,7 @@ export async function POST(request: Request) {
     try {
       const { error } = await sendEmail({
         from,
-        to: [to],
+        to,
         subject: `Meditații AI — ${created ? "înscriere" : "update"}: ${name}`,
         html,
         replyTo: email,
