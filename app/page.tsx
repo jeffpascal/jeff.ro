@@ -14,6 +14,7 @@ import {
   Faq,
 } from "../components/meditatii/Sections";
 import RegisterForm from "../components/meditatii/RegisterForm";
+import MetaTracking from "../components/meditatii/MetaTracking";
 import SiteFooter from "../components/meditatii/SiteFooter";
 import { nextSession, formatSessionDate } from "./data/sessions";
 import styles from "../components/meditatii/meditatii.module.css";
@@ -89,6 +90,7 @@ export default function Home() {
       </Section>
 
       <SiteFooter />
+      <MetaTracking />
     </main>
   );
 }

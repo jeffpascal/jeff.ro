@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { getConsent } from "./MetaTracking";
 import styles from "./meditatii.module.css";
 
 type Props = {
@@ -38,6 +39,11 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
   const [website, setWebsite] = useState(""); // honeypot
   const [state, setState] = useState<"idle" | "loading" | "done" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [eventId] = useState(() =>
+    typeof crypto !== "undefined" && "randomUUID" in crypto
+      ? crypto.randomUUID()
+      : `ev-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`
+  );
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -69,10 +75,15 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
           utm: readUtm(),
           referrer: typeof document !== "undefined" ? document.referrer : "",
           landingPath: typeof window !== "undefined" ? window.location.pathname : "",
+          eventId,
+          trackingConsent: getConsent() === "granted",
         }),
       });
       if (res.ok) {
         setState("done");
+        if (getConsent() === "granted" && typeof window !== "undefined" && window.fbq) {
+          window.fbq("track", "Lead", {}, { eventID: eventId });
+        }
       } else {
         const data = await res.json().catch(() => ({}));
         setErrorMsg(data?.error || "Nu am putut trimite. Încearcă din nou.");

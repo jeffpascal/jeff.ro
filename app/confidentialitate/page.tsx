@@ -71,8 +71,11 @@ export default function Confidentialitate() {
                 <strong>Cine mai vede datele.</strong> Folosim furnizori care
                 procesează datele în numele nostru: Vercel (găzduirea
                 site-ului), MongoDB Atlas (stocarea înscrierilor) și Resend
-                (trimiterea emailurilor). Nu vindem și nu închiriem datele
-                nimănui.
+                (trimiterea emailurilor). Dacă accepți cookie-urile de
+                măsurare, Meta (Facebook) primește evenimente de conversie —
+                folosite doar ca să știm dacă reclamele aduc înscrieri; poți
+                refuza fără să afecteze înscrierea. Nu vindem și nu închiriem
+                datele nimănui.
               </p>
               <p>
                 <strong>Cât le păstrăm.</strong> Până când îți retragi

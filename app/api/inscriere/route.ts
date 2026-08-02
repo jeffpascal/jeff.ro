@@ -1,6 +1,55 @@
 import { NextResponse } from "next/server";
+import { createHash } from "crypto";
 import { sendEmail } from "../../lib/resend";
 import { getDb } from "../../lib/mongo";
+
+/** Conversions API: trimite Lead cu același event_id ca browserul (deduplicare).
+ *  Rulează doar cu consimțământ explicit de tracking. */
+async function sendMetaLead(args: {
+  email: string;
+  phone: string;
+  eventId: string;
+  ip?: string;
+  ua?: string;
+  sourceUrl: string;
+}) {
+  const pixelId = process.env.META_PIXEL_ID;
+  const token = process.env.META_CAPI_ACCESS_TOKEN;
+  if (!pixelId || !token) return;
+  const sha = (s: string) => createHash("sha256").update(s).digest("hex");
+  const digits = args.phone.replace(/\D/g, "");
+  const phoneIntl = digits.startsWith("0") ? `4${digits}` : digits;
+  const payload = {
+    data: [
+      {
+        event_name: "Lead",
+        event_time: Math.floor(Date.now() / 1000),
+        event_id: args.eventId,
+        action_source: "website",
+        event_source_url: args.sourceUrl,
+        user_data: {
+          em: [sha(args.email)],
+          ph: [sha(phoneIntl)],
+          ...(args.ip ? { client_ip_address: args.ip } : {}),
+          ...(args.ua ? { client_user_agent: args.ua } : {}),
+        },
+      },
+    ],
+  };
+  try {
+    const res = await fetch(
+      `https://graph.facebook.com/v21.0/${pixelId}/events?access_token=${token}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }
+    );
+    if (!res.ok) console.error("CAPI error:", await res.text());
+  } catch (err) {
+    console.error("CAPI exception:", err);
+  }
+}
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_RE = /^[+]?[\d().\s-]{8,}$/;
@@ -34,6 +83,8 @@ export async function POST(request: Request) {
     const sessionSlug = str(body?.sessionSlug, 80) || "sesiunea-deschisa-1";
     const marketingConsent = body?.marketingConsent === true;
     const privacyAccepted = body?.privacyAccepted === true;
+    const trackingConsent = body?.trackingConsent === true;
+    const eventId = str(body?.eventId, 64);
     const utm = typeof body?.utm === "object" && body?.utm !== null ? body.utm : {};
 
     if (name.length < 2) {
@@ -136,6 +187,18 @@ export async function POST(request: Request) {
         { status: 502 }
       );
     }
+
+    if (trackingConsent && eventId) {
+      await sendMetaLead({
+        email,
+        phone,
+        eventId,
+        ip: request.headers.get("x-forwarded-for")?.split(",")[0]?.trim(),
+        ua: request.headers.get("user-agent") ?? undefined,
+        sourceUrl: `https://jeff.ro${attribution.landingPath || "/"}`,
+      });
+    }
+
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Inscriere API error:", err);
