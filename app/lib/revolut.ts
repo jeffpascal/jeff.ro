@@ -66,6 +66,9 @@ export async function createRevolutOrder(input: {
       merchant_order_data: { reference: input.merchantOrderRef },
       redirect_url: input.redirectUrl,
       capture_mode: "automatic",
+      // Fără asta, linkul rămâne plătibil ~30 de zile: cineva ar putea plăti
+      // mult după ce am eliberat intervalul.
+      expire_pending_after: "PT30M",
       metadata: input.metadata,
     }),
   });
@@ -87,6 +90,16 @@ export async function createRevolutOrder(input: {
     throw new Error(`Revolut API error: ${msg}`);
   }
   return body as RevolutOrder;
+}
+
+/** Adevărul economic vine de aici, nu din corpul webhook-ului. */
+export async function retrieveRevolutOrder(orderId: string): Promise<RevolutOrder> {
+  const res = await fetch(`${apiBase()}/api/orders/${encodeURIComponent(orderId)}`, {
+    method: "GET",
+    headers: authHeaders(),
+  });
+  if (!res.ok) throw new Error(`Revolut retrieve failed: HTTP ${res.status}`);
+  return (await res.json()) as RevolutOrder;
 }
 
 export function verifyRevolutWebhookSignature(input: {

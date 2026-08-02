@@ -10,13 +10,14 @@ export const dynamic = "force-dynamic";
  * Rulează din cron-ul Vercel; acceptă și un secret ca să poată fi apelat manual.
  */
 export async function GET(request: Request) {
+  // Fail-closed: fără secret configurat, endpoint-ul nu răspunde deloc. Un
+  // header `x-vercel-cron` poate fi trimis de oricine, deci nu e dovadă.
   const secret = process.env.CRON_SECRET;
-  if (secret) {
-    const auth = request.headers.get("authorization");
-    const fromVercel = request.headers.get("x-vercel-cron");
-    if (!fromVercel && auth !== `Bearer ${secret}`) {
-      return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-    }
+  if (!secret) {
+    return NextResponse.json({ error: "cron not configured" }, { status: 503 });
+  }
+  if (request.headers.get("authorization") !== `Bearer ${secret}`) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
   const dbPromise = getDb();

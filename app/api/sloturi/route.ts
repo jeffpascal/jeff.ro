@@ -10,7 +10,15 @@ export async function GET() {
   let taken = new Set<string>();
 
   const dbPromise = getDb();
-  if (dbPromise) {
+  // Fail-closed: dacă nu putem citi ce e ocupat, nu oferim nimic. Altfel am
+  // vinde un interval deja plătit.
+  if (!dbPromise) {
+    return NextResponse.json(
+      { priceLei: ONE_ON_ONE.priceLei, durationMin: ONE_ON_ONE.durationMin, slots: [] },
+      { status: 503 }
+    );
+  }
+  {
     try {
       const db = await dbPromise;
       const rows = await db
@@ -27,6 +35,10 @@ export async function GET() {
       taken = new Set(rows.map((r) => r.slotIso as string));
     } catch (err) {
       console.error("Sloturi Mongo error:", err);
+      return NextResponse.json(
+        { priceLei: ONE_ON_ONE.priceLei, durationMin: ONE_ON_ONE.durationMin, slots: [] },
+        { status: 503 }
+      );
     }
   }
 

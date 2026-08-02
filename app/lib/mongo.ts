@@ -10,7 +10,16 @@ export function getDb(): Promise<Db> | null {
   const uri = process.env.MONGODB_URI;
   if (!uri) return null;
   if (!global._jeffroMongoPromise) {
-    global._jeffroMongoPromise = new MongoClient(uri).connect();
+    // O promisiune respinsă nu trebuie memorată: altfel un hiccup de rețea
+    // face ca fiecare cerere ulterioară să eșueze până la redeploy.
+    global._jeffroMongoPromise = new MongoClient(uri, {
+      serverSelectionTimeoutMS: 8000,
+    })
+      .connect()
+      .catch((err) => {
+        global._jeffroMongoPromise = undefined;
+        throw err;
+      });
   }
   const dbName = process.env.MONGODB_DB_NAME || "jeffro";
   return global._jeffroMongoPromise.then((c) => c.db(dbName));

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getDb } from "../../../lib/mongo";
 import { sendEmail } from "../../../lib/resend";
-import { verifyRevolutWebhookSignature } from "../../../lib/revolut";
+import { verifyRevolutWebhookSignature, retrieveRevolutOrder } from "../../../lib/revolut";
 
 function esc(s: string): string {
   return String(s ?? "").replace(/[<>&"]/g, (c) =>
@@ -9,8 +9,12 @@ function esc(s: string): string {
   );
 }
 
-const PAID = new Set(["ORDER_COMPLETED", "ORDER_AUTHORISED"]);
-const DEAD = new Set(["ORDER_CANCELLED", "ORDER_FAILED", "ORDER_PAYMENT_DECLINED"]);
+// Doar COMPLETED înseamnă bani încasați. AUTHORISED e doar o rezervare pe card
+// și nu trebuie să confirme nimic.
+const PAID = new Set(["ORDER_COMPLETED"]);
+// Un refuz de card nu e final — omul poate reîncerca imediat cu alt card, deci
+// NU eliberăm intervalul pe ORDER_PAYMENT_DECLINED.
+const DEAD = new Set(["ORDER_CANCELLED", "ORDER_FAILED"]);
 
 export async function POST(request: Request) {
   // Corpul brut, verbatim — orice reserializare strică HMAC-ul.
@@ -39,8 +43,15 @@ export async function POST(request: Request) {
   if (!ref) return NextResponse.json({ ok: true, ignored: "no reference" });
 
   const dbPromise = getDb();
-  if (!dbPromise) return NextResponse.json({ ok: true, ignored: "no db" });
-  const db = await dbPromise;
+  // Fail-closed: fără bază nu putem procesa. 503 face Revolut să reîncerce.
+  if (!dbPromise) return NextResponse.json({ error: "db unavailable" }, { status: 503 });
+  let db;
+  try {
+    db = await dbPromise;
+  } catch (err) {
+    console.error("Webhook Mongo error:", err);
+    return NextResponse.json({ error: "db unavailable" }, { status: 503 });
+  }
   const bookings = db.collection("bookings");
 
   if (DEAD.has(event)) {
@@ -53,6 +64,35 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
   if (!PAID.has(event)) return NextResponse.json({ ok: true, ignored: event });
+
+  // Nu ne bazăm pe corpul webhook-ului: întrebăm Revolut care e adevărul.
+  const booking = await bookings.findOne({ ref });
+  if (!booking) {
+    console.error("Webhook pentru rezervare inexistentă:", ref, payload.order_id);
+    return NextResponse.json({ ok: true, ignored: "unknown ref" });
+  }
+  if (!payload.order_id) {
+    return NextResponse.json({ ok: true, ignored: "no order id" });
+  }
+  try {
+    const order = await retrieveRevolutOrder(payload.order_id);
+    const expectedMinor = Number(booking.priceLei) * 100;
+    const okState = order.state === "completed";
+    const okAmount = Number(order.amount) === expectedMinor;
+    const okCurrency = order.currency === "RON";
+    const okRef = order.merchant_order_data?.reference === ref;
+    if (!okState || !okAmount || !okCurrency || !okRef) {
+      console.error("Verificare Revolut esuata:", {
+        ref, state: order.state, amount: order.amount, expectedMinor,
+        currency: order.currency, orderRef: order.merchant_order_data?.reference,
+      });
+      return NextResponse.json({ ok: true, ignored: "verification failed" });
+    }
+  } catch (err) {
+    // Nu confirmăm pe baza unei presupuneri — lăsăm Revolut să reîncerce.
+    console.error("Revolut retrieve error:", err);
+    return NextResponse.json({ error: "verify failed" }, { status: 503 });
+  }
 
   // Idempotent: doar prima tranziție spre confirmed trimite emailuri.
   const res = await bookings.findOneAndUpdate(

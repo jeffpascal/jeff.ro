@@ -72,7 +72,7 @@ export async function POST(request: Request) {
 
     const now = new Date();
     const holdExpiresAt = new Date(now.getTime() + HOLD_MIN * 60_000);
-    const ref = `1to1-${randomUUID().slice(0, 8)}`;
+    const ref = `1to1-${randomUUID()}`;
 
     // Eliberăm intervalul dacă cineva l-a ținut fără să plătească — dar
     // păstrăm înregistrarea, e un lead.
@@ -106,7 +106,7 @@ export async function POST(request: Request) {
         currency: ONE_ON_ONE.currency,
         description: `Sesiune 1 la 1 — ${slot.label}`,
         merchantOrderRef: ref,
-        redirectUrl: `https://www.jeff.ro/multumesc-rezervare?ref=${ref}`,
+        redirectUrl: "https://www.jeff.ro/multumesc-rezervare",
         customer: { email, full_name: name, phone },
         metadata: { ref, slotIso: slot.iso },
         idempotencyKey: ref,
