@@ -142,6 +142,7 @@ export async function POST(request: Request) {
     const business = str(body?.business, 300);
     const outcome = str(body?.outcome, 2000);
     const aiExperience = str(body?.aiExperience, 40);
+    const aiExperienceOther = str(body?.aiExperienceOther, 300);
     const sessionSlug = str(body?.sessionSlug, 80) || "sesiunea-deschisa-1";
     const marketingConsent = body?.marketingConsent === true;
     const privacyAccepted = body?.privacyAccepted === true;
@@ -210,7 +211,7 @@ export async function POST(request: Request) {
           { emailNormalized: email, sessionSlug },
           {
             $set: {
-              name, email, phone, business, outcome, aiExperience,
+              name, email, phone, business, outcome, aiExperience, aiExperienceOther,
               marketingConsent, trackingConsent, privacyAcceptedAt: now,
               lastTouch: attribution, updatedAt: now,
             },
@@ -245,7 +246,7 @@ export async function POST(request: Request) {
         ${row("Telefon", phone)}
         ${row("Afacere / rol", business)}
         ${row("Rezultatul dorit", outcome)}
-        ${row("Experiență AI", aiExperience)}
+        ${row("Experiență AI", aiExperience + (aiExperienceOther ? ` — ${aiExperienceOther}` : ""))}
         ${row("Sesiune", sessionSlug)}
         ${row("Marketing opt-in", marketingConsent ? "da" : "nu")}
         ${row("Tracking consent", trackingConsent ? "da" : "nu")}

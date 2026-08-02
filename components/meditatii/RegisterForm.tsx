@@ -14,6 +14,7 @@ const AI_EXPERIENCE_OPTIONS: Array<[string, string]> = [
   ["chat_only", "Doar ChatGPT, ocazional"],
   ["regular", "Folosesc des, dar sub potențial"],
   ["advanced", "Nivel avansat"],
+  ["other", "Altele — îți scriu eu cu ce am lucrat"],
 ];
 
 function readUtm() {
@@ -40,6 +41,7 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
   const [business, setBusiness] = useState("");
   const [outcome, setOutcome] = useState("");
   const [aiExperience, setAiExperience] = useState("chat_only");
+  const [aiExperienceOther, setAiExperienceOther] = useState("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [marketingConsent, setMarketingConsent] = useState(false);
   const [website, setWebsite] = useState(""); // honeypot
@@ -74,6 +76,7 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
           business: business.trim(),
           outcome: outcome.trim(),
           aiExperience,
+          aiExperienceOther: aiExperienceOther.trim(),
           privacyAccepted,
           marketingConsent,
           website,
@@ -209,6 +212,23 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
             ))}
           </select>
         </div>
+
+        {aiExperience === "other" && (
+          <div className={`${styles.field} ${styles.fieldFull}`}>
+            <label className={styles.label} htmlFor="reg-exp-other">
+              Cu ce ai lucrat, mai exact?
+            </label>
+            <input
+              id="reg-exp-other"
+              className={styles.input}
+              type="text"
+              value={aiExperienceOther}
+              onChange={(e) => setAiExperienceOther(e.target.value)}
+              placeholder="ex: Claude, n8n, Midjourney, agenți proprii…"
+              autoFocus
+            />
+          </div>
+        )}
 
         <div className={styles.honeypot} aria-hidden="true">
           <label htmlFor="reg-website">Website</label>

@@ -103,9 +103,9 @@ export function WhatIs() {
 const STEPS: Array<[string, string]> = [
   ["Context", "Spui liber ce faci, ce vrei și ce te blochează. Fără pregătire, fără jargon."],
   ["Claritate", "Îți pun întrebări, una câte una, până când problema și rezultatul dorit sunt limpezi."],
-  ["Alegere", "Alegem cea mai simplă unealtă care rezolvă cazul. Nu pornim de la agenți."],
-  ["Construcție", "Construim live: o pagină, un workflow, un plan pe care îl poți executa."],
-  ["Verificare", "Testăm rezultatul. La bani, date și publicare decide omul, nu AI-ul."],
+  ["Alegere", "Alegem agentul și uneltele potrivite pentru tine și pentru cazul tău."],
+  ["Construcție", "Construim live: o aplicație, o pagină, un plan, o automatizare."],
+  ["Audit", "Cum știi ce face AI-ul tău: îl pui să-ți raporteze pe WhatsApp sau Telegram."],
 ];
 
 export function Method() {
@@ -132,8 +132,8 @@ export function DemoSession() {
       <h2 className={styles.h2}>Ce se întâmplă la sesiunea deschisă</h2>
       <p className={styles.lead}>
         Pe un singur caz, ales din grup, parcurgem toată metoda — de la o idee
-        spusă cu voce tare, la o pagină publicată pe internet și prima reclamă
-        draft. Fără tăieturi, fără slide-uri pregătite dinainte.
+        spusă cu voce tare, la o automatizare, un site sau o aplicație care
+        chiar funcționează. Fără tăieturi, fără slide-uri pregătite dinainte.
       </p>
       <div className={styles.terminal}>
         <p><span className={styles.tDim}>—</span> „Vreau AI în restaurantul meu. Am auzit că-mi trebuie un agent coordonator.”</p>
@@ -148,7 +148,7 @@ export function DemoSession() {
         * metoda, comprimată. La sesiune o facem live, pe cazul ales din grup.
       </p>
       <ul className={styles.agendaList}>
-        <li>Ce poate face AI acum pentru o afacere mică — fără mituri și fără hype.</li>
+        <li>Ce poate face AI acum pentru o afacere — fără mituri și fără hype.</li>
         <li>Un caz real, lucrat cap-coadă, în direct.</li>
         <li>Întrebările tale, cu răspunsuri pe cazul tău.</li>
       </ul>
@@ -332,8 +332,6 @@ export function ForWho() {
             <ul className={styles.spreadList}>
               <li>Cauți îmbogățire rapidă sau venit pasiv, fără muncă.</li>
               <li>Vrei doar noutăți și tool-uri, fără să aplici pe nimic.</li>
-              <li>Ești programator avansat și vrei arhitectură AI.</li>
-              <li>Aștepți un „autopilot” care face totul singur.</li>
             </ul>
           </div>
         </div>
@@ -364,8 +362,9 @@ export function About() {
         </p>
         <p>
           În paralel construiesc cu AI lucruri care chiar rulează: magazine
-          online, automatizări, campanii de marketing. Două dintre ele le-ai
-          văzut mai sus.
+          online, automatizări și campanii de marketing. Integrez AI în afaceri
+          care merg deja și le construiesc automatizările de care au nevoie.
+          Două dintre ele le-ai văzut mai sus.
         </p>
         <p>
           La meditații nu primești teorie despre AI. Îți arăt exact cum lucrez
