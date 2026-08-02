@@ -44,7 +44,12 @@ export async function POST(request: Request) {
   const bookings = db.collection("bookings");
 
   if (DEAD.has(event)) {
-    await bookings.deleteOne({ ref, status: "pending_payment" });
+    // Nu ștergem: rămâne lead. Eliberăm doar intervalul.
+    await bookings.updateOne(
+      { ref, status: "pending_payment" },
+      { $set: { status: "abandoned", abandonReason: event, abandonedAt: new Date() },
+        $unset: { holdExpiresAt: "", active: "" } }
+    );
     return NextResponse.json({ ok: true });
   }
   if (!PAID.has(event)) return NextResponse.json({ ok: true, ignored: event });
@@ -55,6 +60,7 @@ export async function POST(request: Request) {
     {
       $set: {
         status: "confirmed",
+        active: true,
         paidAt: new Date(),
         updatedAt: new Date(),
         "payment.state": event,

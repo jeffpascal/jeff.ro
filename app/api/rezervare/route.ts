@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     const name = str(body?.name, 120);
     const email = str(body?.email, 200).toLowerCase();
     const phone = str(body?.phone, 40);
-    const topic = str(body?.topic, 2000);
+    const topic = str(body?.topic, 20000);
     const slotIso = str(body?.slotIso, 40);
 
     if (name.length < 2) {
@@ -64,24 +64,29 @@ export async function POST(request: Request) {
     }
     const db = await dbPromise;
     const bookings = db.collection("bookings");
-    await bookings.createIndex({ slotIso: 1 }, { unique: true }).catch(() => {});
+    // Unic doar peste rezervările active: cele abandonate rămân în bază drept
+    // lead-uri, fără să mai blocheze intervalul.
+    await bookings
+      .createIndex({ slotIso: 1 }, { unique: true, partialFilterExpression: { active: true } })
+      .catch(() => {});
 
     const now = new Date();
     const holdExpiresAt = new Date(now.getTime() + HOLD_MIN * 60_000);
     const ref = `1to1-${randomUUID().slice(0, 8)}`;
 
-    // Eliberăm rezervările neplătite și expirate, apoi încercăm să prindem slotul.
-    await bookings.deleteMany({
-      slotIso: slot.iso,
-      status: "pending_payment",
-      holdExpiresAt: { $lte: now },
-    });
+    // Eliberăm intervalul dacă cineva l-a ținut fără să plătească — dar
+    // păstrăm înregistrarea, e un lead.
+    await bookings.updateMany(
+      { slotIso: slot.iso, status: "pending_payment", holdExpiresAt: { $lte: now } },
+      { $set: { status: "abandoned", abandonedAt: now, updatedAt: now }, $unset: { active: "" } }
+    );
 
     try {
       await bookings.insertOne({
         ref, slotIso: slot.iso, slotLabel: slot.label,
         name, email, phone, topic,
         status: "pending_payment",
+        active: true,
         priceLei: ONE_ON_ONE.priceLei,
         durationMin: ONE_ON_ONE.durationMin,
         holdExpiresAt, createdAt: now, updatedAt: now,
@@ -114,7 +119,12 @@ export async function POST(request: Request) {
       );
     } catch (err) {
       console.error("Revolut create-order error:", err);
-      await bookings.deleteOne({ ref, status: "pending_payment" });
+      // Lead-ul rămâne salvat; eliberăm doar slotul ca să nu-l blocheze degeaba.
+      await bookings.updateOne(
+        { ref, status: "pending_payment" },
+        { $set: { status: "abandoned", abandonReason: "payment_init_failed", abandonedAt: new Date() },
+          $unset: { holdExpiresAt: "", active: "" } }
+      );
       return NextResponse.json(
         { error: "Nu am putut porni plata. Încearcă din nou în câteva minute." },
         { status: 502 }
@@ -122,7 +132,11 @@ export async function POST(request: Request) {
     }
 
     if (!checkoutUrl && !publicId) {
-      await bookings.deleteOne({ ref, status: "pending_payment" });
+      await bookings.updateOne(
+        { ref, status: "pending_payment" },
+        { $set: { status: "abandoned", abandonReason: "no_checkout_url", abandonedAt: new Date() },
+          $unset: { holdExpiresAt: "", active: "" } }
+      );
       return NextResponse.json({ error: "Plata nu a putut fi inițiată." }, { status: 502 });
     }
 
