@@ -1,53 +1,92 @@
-"use client";
-
 import React from "react";
-import Hero from "../components/Hero";
-import FOMOBanner from "../components/FOMOBanner";
-import PainPoints from "../components/PainPoints";
-import HowItWorks from "../components/HowItWorks";
-import TranslationSlider from "../components/TranslationSlider";
-import AIStudio from "../components/AIStudio";
-import SocialProofOrders from "../components/SocialProofOrders";
-import CourseFeatures from "../components/CourseFeatures";
-import Curriculum from "../components/Curriculum";
-import BeforeAfter from "../components/BeforeAfter";
-import Tiers from "../components/Tiers";
-import TargetAudience from "../components/TargetAudience";
-import Authors from "../components/Authors";
-import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
-import LanguageSwitcher from "../components/LanguageSwitcher";
-import styles from "./page.module.css";
+import { IBM_Plex_Sans, IBM_Plex_Serif, IBM_Plex_Mono } from "next/font/google";
+import Hero from "../components/meditatii/Hero";
+import {
+  Section,
+  PainMirror,
+  WhatIs,
+  Method,
+  DemoSession,
+  Calendar,
+  Pricing,
+  ForWho,
+  About,
+  Faq,
+} from "../components/meditatii/Sections";
+import RegisterForm from "../components/meditatii/RegisterForm";
+import SiteFooter from "../components/meditatii/SiteFooter";
+import { nextSession, formatSessionDate } from "./data/sessions";
+import styles from "../components/meditatii/meditatii.module.css";
+
+const plexSans = IBM_Plex_Sans({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-plex-sans",
+  display: "swap",
+});
+
+const plexSerif = IBM_Plex_Serif({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-plex-serif",
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600"],
+  variable: "--font-plex-mono",
+  display: "swap",
+});
 
 export default function Home() {
-  return (
-    <main className={styles.minHScreen}>
-      <FOMOBanner />
+  const session = nextSession();
 
-      <header className="glass-nav">
-        <div className={`container ${styles.navInner}`}>
-          <div className={styles.logoPlaceholder}>
-            <div className={styles.logoDot}></div>
-            <span className={styles.fontBold}>AI Commerce</span>
+  return (
+    <main
+      className={`${plexSans.variable} ${plexSerif.variable} ${plexMono.variable} ${styles.page}`}
+    >
+      <header className={styles.nav}>
+        <div className={styles.container}>
+          <div className={styles.navInner}>
+            <div className={styles.brand}>
+              <span className={styles.brandDomain}>jeff.ro</span>
+              <span className={styles.brandTag}>meditații AI pentru afaceri</span>
+            </div>
+            <a href="#inscriere" className={styles.navCta}>
+              Înscrie-te gratuit
+            </a>
           </div>
-          <LanguageSwitcher />
         </div>
       </header>
 
       <Hero />
-      <PainPoints />
-      <HowItWorks />
-      <TranslationSlider />
-      <AIStudio />
-      <SocialProofOrders />
-      <CourseFeatures />
-      <Curriculum />
-      <BeforeAfter />
-      <Tiers />
-      <TargetAudience />
-      <Authors />
-      <FAQ />
-      <Footer />
+      <PainMirror />
+      <WhatIs />
+      <Method />
+      <DemoSession />
+      <Calendar />
+      <Pricing />
+      <ForWho />
+      <About />
+      <Faq />
+
+      <Section label="înscriere" id="inscriere">
+        <h2 className={styles.h2}>Spune-mi ce vrei să rezolvi</h2>
+        <p className={styles.lead}>
+          {session
+            ? `Te înscrii la sesiunea deschisă din ${formatSessionDate(session.date)} — online și gratuită.`
+            : "Lasă-mi contextul tău și te anunț când se deschide următoarea sesiune."}{" "}
+          Nu e nevoie de nicio pregătire: scrie cu cuvintele tale.
+        </p>
+        <RegisterForm
+          sessionSlug={session?.slug ?? "urmatoarea-sesiune"}
+          sessionLabel={session ? formatSessionDate(session.date) : "următoarea sesiune"}
+        />
+      </Section>
+
+      <SiteFooter />
     </main>
   );
 }
