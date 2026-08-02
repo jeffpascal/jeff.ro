@@ -357,10 +357,15 @@ export function About() {
         />
         <div className={styles.prose}>
         <p>
-          Sunt Jeff. Programator, am lucrat la IBM. Acum construiesc zilnic cu
-          AI: magazine online, automatizări, campanii de marketing — chestii
-          care rulează în producție, nu demo-uri de prezentare. Două dintre
-          ele le-ai văzut mai sus.
+          Sunt Jeff. Programator de șapte ani, cu diplomă în informatică la
+          Universitatea din Manchester. Am trecut prin IBM, iar acum sunt
+          Technical Lead într-o firmă care duce modele de computer vision în
+          producție.
+        </p>
+        <p>
+          În paralel construiesc cu AI lucruri care chiar rulează: magazine
+          online, automatizări, campanii de marketing. Două dintre ele le-ai
+          văzut mai sus.
         </p>
         <p>
           La meditații nu primești teorie despre AI. Îți arăt exact cum lucrez
