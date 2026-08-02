@@ -12,8 +12,8 @@ type Props = {
 const AI_EXPERIENCE_OPTIONS: Array<[string, string]> = [
   ["none", "N-am folosit AI deloc"],
   ["chat_only", "Doar ChatGPT, ocazional"],
-  ["regular", "Folosesc des, dar simt că sub potențial"],
-  ["advanced", "Destul de avansat"],
+  ["regular", "Folosesc des, dar sub potențial"],
+  ["advanced", "Nivel avansat"],
 ];
 
 function readUtm() {
@@ -56,7 +56,7 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
     if (state === "loading" || state === "done") return;
 
     if (!privacyAccepted) {
-      setErrorMsg("Bifează acordul pentru politica de confidențialitate.");
+      setErrorMsg("Bifează căsuța de acord pentru politica de confidențialitate.");
       setState("error");
       return;
     }
@@ -196,7 +196,7 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
         </div>
         <div className={`${styles.field} ${styles.fieldFull}`}>
           <label className={styles.label} htmlFor="reg-exp">
-            Cât ai folosit AI până acum?
+            Câtă experiență ai cu AI până acum?
           </label>
           <select
             id="reg-exp"
@@ -240,7 +240,7 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
             checked={marketingConsent}
             onChange={(e) => setMarketingConsent(e.target.checked)}
           />
-          <span>Vreau să aflu și despre sesiunile viitoare, pe email. (opțional)</span>
+          <span>Vreau să aflu despre sesiunile viitoare pe email (opțional).</span>
         </label>
 
         <div className={styles.fieldFull}>
@@ -249,7 +249,7 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
             className={styles.btnPrimary}
             disabled={state === "loading"}
           >
-            {state === "loading" ? "Se trimite…" : "Rezervă-mi loc la sesiunea gratuită"}
+            {state === "loading" ? "Se trimite…" : "Rezervă-mi un loc la sesiunea gratuită"}
           </button>
         </div>
 
@@ -259,8 +259,8 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
           </p>
         ) : (
           <p className={`${styles.formHint} ${styles.fieldFull}`}>
-            Două minute de completat. Cu cât scrii mai concret, cu atât pot
-            pregăti sesiunea pe cazurile voastre.
+            Completezi în două minute. Cu cât scrii mai concret, cu atât pot
+            pregăti sesiunea mai bine pe cazul tău.
           </p>
         )}
       </div>

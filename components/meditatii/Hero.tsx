@@ -33,7 +33,7 @@ export default function Hero() {
             <div className={styles.sessionCard}>
               <p className={styles.sessionCardDate}>
                 Următoarea sesiune · {formatSessionDate(session.date)} · online ·{" "}
-                {session.priceLei === 0 ? "gratuit" : `${session.priceLei} lei`}
+                {session.priceLei === 0 ? "gratuită" : `${session.priceLei} lei`}
               </p>
               <p className={styles.sessionCardTitle}>{session.title}</p>
               <p className={styles.sessionCardSummary}>{session.summary}</p>

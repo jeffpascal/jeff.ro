@@ -6,7 +6,7 @@ import styles from "../../components/meditatii/meditatii.module.css";
 
 export const metadata: Metadata = {
   title: "Ștergerea datelor | jeff.ro",
-  description: "Cum ceri ștergerea datelor tale de pe jeff.ro. / How to request deletion of your data.",
+  description: "Cum ceri ștergerea datelor tale de pe jeff.ro — How to request deletion of your data.",
   robots: { index: false, follow: true },
 };
 
@@ -40,7 +40,7 @@ export default function StergereDate() {
         <div className={styles.hero}>
           <div className={styles.heroInner}>
             <p className={styles.eyebrow}>jeff.ro · meditații AI</p>
-            <h1 className={styles.h2}>Ștergerea datelor / Data deletion</h1>
+            <h1 className={styles.h2}>Ștergerea datelor — Data deletion</h1>
 
             <div className={styles.prose}>
               <p>
@@ -52,7 +52,7 @@ export default function StergereDate() {
                 trebuie să explici de ce.
               </p>
               <p>
-                <strong>Ce ștergem.</strong> Toate datele asociate ție:
+                <strong>Ce ștergem.</strong> Toate datele care te privesc:
                 înscrierea (nume, email, telefon, descrierea afacerii și a
                 obiectivului), consimțămintele și datele de atribuire a
                 vizitei. Confirmăm ștergerea pe email în cel mult 30 de zile,
@@ -61,7 +61,7 @@ export default function StergereDate() {
               <p>
                 <strong>Datele trimise către Meta.</strong> Dacă ai acceptat
                 cookie-urile de măsurare, către Meta s-au trimis evenimente de
-                conversie cu date criptate ireversibil (hash). Poți gestiona
+                conversie cu date transformate ireversibil (hash). Poți gestiona
                 sau șterge activitatea ta off-Facebook direct din contul tău
                 Facebook: Setări → Informațiile tale Facebook → Activitate
                 off-Facebook.
@@ -70,9 +70,10 @@ export default function StergereDate() {
                 <strong>English.</strong> To request deletion of your data,
                 email{" "}
                 <a href="mailto:jeffpascal96@gmail.com">jeffpascal96@gmail.com</a>{" "}
-                from (or mentioning) the address you registered with, subject
-                “Data deletion”. We delete all records associated with you and
-                confirm within 30 days.
+                from the address you used to register (or mention that address
+                in your message), with the subject line “Data deletion”. We
+                will delete all records associated with you and confirm the
+                deletion within 30 days.
               </p>
               <p>
                 Detalii complete despre ce colectăm și de ce:{" "}

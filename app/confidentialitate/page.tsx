@@ -6,7 +6,7 @@ import styles from "../../components/meditatii/meditatii.module.css";
 
 export const metadata: Metadata = {
   title: "Politica de confidențialitate | jeff.ro",
-  description: "Ce date colectează jeff.ro, de ce, și ce drepturi ai.",
+  description: "Ce date colectează jeff.ro, de ce le colectează și ce drepturi ai.",
   robots: { index: false, follow: true },
 };
 
@@ -49,8 +49,8 @@ export default function Confidentialitate() {
                 <a href="mailto:jeffpascal96@gmail.com">jeffpascal96@gmail.com</a>).
               </p>
               <p>
-                <strong>Ce date colectăm.</strong> Doar ce completezi în
-                formularul de înscriere: nume, email, telefon, o descriere a
+                <strong>Ce date colectăm.</strong> Colectăm doar ce completezi
+                în formularul de înscriere: nume, email, telefon, o descriere a
                 afacerii tale și a rezultatului pe care vrei să-l obții, plus
                 sursa vizitei (de exemplu, din ce campanie ai ajuns pe site).
                 Nu-ți cerem și te rugăm să nu introduci date sensibile în
@@ -73,8 +73,8 @@ export default function Confidentialitate() {
                 site-ului), MongoDB Atlas (stocarea înscrierilor) și Resend
                 (trimiterea emailurilor). Dacă accepți cookie-urile de
                 măsurare, Meta (Facebook) primește evenimente de conversie —
-                folosite doar ca să știm dacă reclamele aduc înscrieri; poți
-                refuza fără să afecteze înscrierea. Nu vindem și nu închiriem
+                folosite doar ca să știm dacă reclamele aduc înscrieri; le poți
+                refuza fără ca asta să afecteze înscrierea. Nu vindem și nu închiriem
                 datele nimănui.
               </p>
               <p>
@@ -82,8 +82,8 @@ export default function Confidentialitate() {
                 consimțământul sau ceri ștergerea lor.
               </p>
               <p>
-                <strong>Drepturile tale.</strong> Poți cere oricând accesul la
-                datele tale, corectarea sau ștergerea lor, și îți poți retrage
+                <strong>Drepturile tale.</strong> Poți cere oricând acces la
+                datele tale, corectarea sau ștergerea lor și îți poți retrage
                 consimțământul — pașii exacți sunt pe pagina de{" "}
                 <Link href="/stergere-date">ștergere a datelor</Link>. Dacă
                 ceva nu ți se pare în regulă, ne poți scrie sau poți depune o
@@ -91,7 +91,8 @@ export default function Confidentialitate() {
               </p>
               <p>
                 Ultima actualizare: 2 august 2026. Documentul va fi revizuit,
-                inclusiv cu sfat juridic, înainte de campaniile plătite.
+                inclusiv cu o consultare juridică, înainte de campaniile
+                plătite.
               </p>
               <p>
                 <Link href="/" className={styles.btnGhost}>← Înapoi la pagina principală</Link>

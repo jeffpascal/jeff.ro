@@ -172,7 +172,7 @@ export async function POST(request: Request) {
     }
     if (!privacyAccepted) {
       return NextResponse.json(
-        { error: "Bifează acordul pentru politica de confidențialitate." },
+        { error: "Bifează căsuța de acord pentru politica de confidențialitate." },
         { status: 400 }
       );
     }

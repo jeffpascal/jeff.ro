@@ -45,7 +45,7 @@ export function PainMirror() {
         ))}
       </ul>
       <p className={styles.painClose}>
-        Dacă te-ai regăsit măcar într-una — exact pentru asta există
+        Dacă te-ai regăsit măcar în unul — exact pentru asta există
         meditațiile.
       </p>
     </Section>
@@ -54,7 +54,7 @@ export function PainMirror() {
 
 const COMPARE_ROWS: Array<[string, string]> = [
   ["Te uiți la lecții înregistrate", "Lucrăm live, pe problema ta"],
-  ["Exemple generice, pentru oricine", "Cazul tău, în hot seat"],
+  ["Exemple generice, pentru oricine", "Cazul tău, pe masă"],
   ["Termini cu notițe și bune intenții", "Pleci cu ceva construit sau cu pașii exacți"],
   ["Întrebările rămân pe forum", "Întrebi și primești răspuns pe loc"],
 ];
@@ -296,11 +296,11 @@ const FAQ_ITEMS: Array<[string, string]> = [
   ],
   [
     "Cu ce unelte lucrăm?",
-    "Alegem după problemă, nu după hype: ChatGPT, Claude, unelte de imagini, automatizări. Ideea nu e să înveți un tool anume, ci să știi să alegi și să verifici.",
+    "Alegem după problemă, nu după hype: ChatGPT, Claude, unelte pentru imagini, automatizări. Ideea nu e să înveți o unealtă anume, ci să știi să alegi și să verifici.",
   ],
   [
     "Cât mă costă uneltele AI?",
-    "De cele mai multe ori, la început, ajunge un singur abonament — sau chiar variantele gratuite. Stabilim împreună ce merită plătit pentru cazul tău, înainte să plătești ceva.",
+    "De cele mai multe ori, la început, ajunge un singur abonament — sau chiar varianta gratuită. Stabilim împreună ce merită plătit pentru cazul tău, înainte să plătești ceva.",
   ],
   [
     "N-am buget mare. Are sens pentru mine?",
@@ -316,7 +316,7 @@ const FAQ_ITEMS: Array<[string, string]> = [
   ],
   [
     "E sigur să vorbesc despre firma mea?",
-    "În formular nu-ți cer date sensibile. În sesiuni discutăm și ce e sigur de pus într-un AI și ce nu — e una dintre temele importante.",
+    "În formular nu-ți cer date sensibile. În sesiuni discutăm și ce informații e sigur să pui într-un AI și ce nu — e una dintre temele importante.",
   ],
 ];
 
