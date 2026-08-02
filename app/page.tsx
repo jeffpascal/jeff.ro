@@ -7,6 +7,7 @@ import {
   WhatIs,
   Method,
   DemoSession,
+  Proof,
   Calendar,
   Pricing,
   ForWho,
@@ -67,6 +68,7 @@ export default function Home() {
       <WhatIs />
       <Method />
       <DemoSession />
+      <Proof />
       <Calendar />
       <Pricing />
       <ForWho />

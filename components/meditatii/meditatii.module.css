@@ -642,7 +642,145 @@
   max-width: 60ch;
 }
 
-/* ---------- pentru cine ---------- */
+/* ---------- dovadă ---------- */
+
+.proofList {
+  display: grid;
+  gap: 1.6rem;
+  max-width: 46rem;
+  margin-top: 1.8rem;
+}
+
+.proofItem {
+  border-left: 3px solid var(--pen-blue);
+  padding-left: 1.3rem;
+}
+
+.proofTitle {
+  font-family: var(--font-plex-serif), Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.15rem;
+}
+
+.proofLink {
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 0.82rem;
+  color: var(--pen-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.proofDesc {
+  margin: 0.5rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+.proofNote {
+  margin-top: 1.8rem;
+  max-width: 58ch;
+  font-weight: 500;
+}
+
+/* ---------- pentru cine (spread de caiet — rupe ritmul paginii) ---------- */
+
+.spread {
+  border-top: 1px solid var(--line);
+  padding: 4.5rem 0;
+  background: var(--card);
+}
+
+.spreadInner {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 1.5rem 0 clamp(2.5rem, 8vw, 5.5rem);
+}
+
+.spreadTitle {
+  font-family: var(--font-plex-serif), Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 2.6rem;
+  max-width: 20ch;
+}
+
+.spreadPages {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0 clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.spreadFold {
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--line) 0 6px,
+    transparent 6px 12px
+  );
+  align-self: stretch;
+}
+
+.spreadSide h3 {
+  font-family: var(--font-plex-serif), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.1rem;
+}
+
+.spreadYes h3 {
+  color: var(--pen-blue);
+}
+
+.spreadNo h3 {
+  color: var(--pen-red);
+}
+
+.spreadList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.spreadList li {
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.spreadYes .spreadList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--pen-blue);
+  font-weight: 600;
+}
+
+.spreadNo .spreadList li::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: var(--pen-red);
+  font-weight: 600;
+}
+
+.spreadNo .spreadList li {
+  color: var(--ink-soft);
+}
+
+@media (max-width: 760px) {
+  .spreadPages {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+  .spreadFold {
+    display: none;
+  }
+}
 
 .forWhoGrid {
   display: grid;

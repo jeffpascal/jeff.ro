@@ -251,34 +251,94 @@ export function Pricing() {
   );
 }
 
+export function Proof() {
+  return (
+    <Section label="ce am construit">
+      <h2 className={styles.h2}>Nu vorbesc din cărți. Astea rulează acum.</h2>
+      <p className={styles.lead}>
+        Metoda pe care o predau e metoda cu care lucrez. Două lucruri
+        construite cu ea, pe care le poți deschide chiar acum:
+      </p>
+      <div className={styles.proofList}>
+        <article className={styles.proofItem}>
+          <p className={styles.proofTitle}>INEO DECOR</p>
+          <a
+            className={styles.proofLink}
+            href="https://decor.ineo.ro"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            decor.ineo.ro
+          </a>
+          <p className={styles.proofDesc}>
+            Magazin online cu plată cu cardul, recuperare automată a
+            coșurilor abandonate pe email, feed de produse către Google
+            Shopping și măsurare corectă a conversiilor. Construit și
+            întreținut de mine, cu AI.
+          </p>
+        </article>
+        <article className={styles.proofItem}>
+          <p className={styles.proofTitle}>Vila Franceză</p>
+          <a
+            className={styles.proofLink}
+            href="https://vilafranceza.ro"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            vilafranceza.ro
+          </a>
+          <p className={styles.proofDesc}>
+            Șase case de închiriat în Colibița, automatizate: prețurile se
+            ajustează singure după cerere, mesajele oaspeților de pe Airbnb și
+            Booking primesc răspuns asistat de AI, apelurile telefonice sunt
+            transcrise și rezumate, iar echipa primește programul de curățenie
+            pe Telegram.
+          </p>
+        </article>
+      </div>
+      <p className={styles.proofNote}>
+        Exact felul ăsta de lucruri le desfacem în bucăți la meditații, ca să
+        poți începe și tu de la prima ta problemă.
+      </p>
+    </Section>
+  );
+}
+
 export function ForWho() {
   return (
-    <Section label="pentru cine">
-      <h2 className={styles.h2}>E pentru tine? Verifică sincer.</h2>
-      <div className={styles.forWhoGrid}>
-        <div className={styles.forWhoYes}>
-          <p className={styles.forWhoTitle}>Da, dacă</p>
-          <ul className={styles.forWhoList}>
-            <li>Ai o afacere reală, cu clienți — sau vrei să pornești una
-              și te blochează lucrurile „simple”: marketing, unelte, primii pași.</li>
-            <li>Ai o problemă sau o idee concretă pentru următoarele 30 de zile.</li>
-            <li>Ai încercat măcar puțin ChatGPT sau altă unealtă AI.</li>
-            <li>Poți lucra 90–120 de minute pe săptămână.</li>
-            <li>Vrei să înveți, să fii la zi cu AI și să verifici rezultatele,
-              nu să crezi pe cuvânt.</li>
-          </ul>
-        </div>
-        <div className={styles.forWhoNo}>
-          <p className={styles.forWhoTitle}>Nu, dacă</p>
-          <ul className={styles.forWhoList}>
-            <li>Cauți îmbogățire rapidă sau venit pasiv, fără muncă.</li>
-            <li>Vrei doar noutăți și tool-uri, fără să aplici pe nimic.</li>
-            <li>Ești programator avansat și vrei arhitectură AI.</li>
-            <li>Aștepți un „autopilot” care face totul singur.</li>
-          </ul>
+    <section className={styles.spread} id="pentru-cine">
+      <div className={styles.spreadInner}>
+        <h2 className={styles.spreadTitle}>E pentru tine? Verifică sincer.</h2>
+        <div className={styles.spreadPages}>
+          <div className={`${styles.spreadSide} ${styles.spreadYes}`}>
+            <h3>Da, dacă</h3>
+            <ul className={styles.spreadList}>
+              <li>
+                Ai o afacere reală, cu clienți — sau vrei să pornești una și te
+                blochează lucrurile „simple”: marketing, unelte, primii pași.
+              </li>
+              <li>Ai o problemă sau o idee concretă pentru următoarele 30 de zile.</li>
+              <li>Ai încercat măcar puțin ChatGPT sau altă unealtă AI.</li>
+              <li>Poți lucra 90–120 de minute pe săptămână.</li>
+              <li>
+                Vrei să înveți, să fii la zi cu AI și să verifici rezultatele,
+                nu să crezi pe cuvânt.
+              </li>
+            </ul>
+          </div>
+          <div className={styles.spreadFold} aria-hidden="true" />
+          <div className={`${styles.spreadSide} ${styles.spreadNo}`}>
+            <h3>Nu, dacă</h3>
+            <ul className={styles.spreadList}>
+              <li>Cauți îmbogățire rapidă sau venit pasiv, fără muncă.</li>
+              <li>Vrei doar noutăți și tool-uri, fără să aplici pe nimic.</li>
+              <li>Ești programator avansat și vrei arhitectură AI.</li>
+              <li>Aștepți un „autopilot” care face totul singur.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 }
 
@@ -290,7 +350,8 @@ export function About() {
         <p>
           Sunt Jeff. Programator, am lucrat la IBM. Acum construiesc zilnic cu
           AI: magazine online, automatizări, campanii de marketing — chestii
-          care rulează în producție, nu demo-uri de prezentare.
+          care rulează în producție, nu demo-uri de prezentare. Două dintre
+          ele le-ai văzut mai sus.
         </p>
         <p>
           La meditații nu primești teorie despre AI. Îți arăt exact cum lucrez
