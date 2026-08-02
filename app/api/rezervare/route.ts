@@ -94,6 +94,7 @@ export async function POST(request: Request) {
     }
 
     let checkoutUrl: string | undefined;
+    let publicId: string | undefined;
     try {
       const order = await createRevolutOrder({
         amountMinor: ONE_ON_ONE.priceLei * 100,
@@ -106,6 +107,7 @@ export async function POST(request: Request) {
         idempotencyKey: ref,
       });
       checkoutUrl = order.checkout_url;
+      publicId = order.token;
       await bookings.updateOne(
         { ref },
         { $set: { payment: { provider: "revolut", orderId: order.id, state: order.state }, updatedAt: new Date() } }
@@ -119,12 +121,12 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!checkoutUrl) {
+    if (!checkoutUrl && !publicId) {
       await bookings.deleteOne({ ref, status: "pending_payment" });
       return NextResponse.json({ error: "Plata nu a putut fi inițiată." }, { status: 502 });
     }
 
-    return NextResponse.json({ ref, checkoutUrl, slotLabel: formatSlot(slot.iso) });
+    return NextResponse.json({ ref, checkoutUrl, publicId, slotLabel: formatSlot(slot.iso) });
   } catch (err) {
     console.error("Rezervare API error:", err);
     return NextResponse.json({ error: "Eroare internă. Încearcă din nou." }, { status: 500 });

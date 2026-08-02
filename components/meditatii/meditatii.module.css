@@ -1144,6 +1144,39 @@
   font-weight: 600;
 }
 
+.wallets {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+  max-width: 24rem;
+}
+
+.wallets[data-ready="0"] {
+  display: none;
+}
+
+.walletSlot:empty {
+  display: none;
+}
+
+.walletDivider {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 1.2rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  max-width: 24rem;
+}
+
+.walletDivider::before,
+.walletDivider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
 /* ---------- consent ---------- */
 
 .consentBar {

@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@revolut/checkout':
+        specifier: ^1.1.25
+        version: 1.1.25
       lucide-react:
         specifier: ^0.577.0
         version: 0.577.0(react@19.2.3)
@@ -436,6 +439,9 @@ packages:
   '@nolyfill/is-core-module@1.0.39':
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
+
+  '@revolut/checkout@1.1.25':
+    resolution: {integrity: sha512-SInbH+dzLqOdsooBVfvKhRfJs4EPTIlzVYcPq17Plrh8htSKHV74k5wIth80Pa0C2nIDqBGSRsTh4pIUoGBTBw==}
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -2399,6 +2405,8 @@ snapshots:
       fastq: 1.20.1
 
   '@nolyfill/is-core-module@1.0.39': {}
+
+  '@revolut/checkout@1.1.25': {}
 
   '@rtsao/scc@1.1.0': {}
 
