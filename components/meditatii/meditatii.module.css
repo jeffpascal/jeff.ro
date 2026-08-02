@@ -1057,6 +1057,93 @@
   font-size: 0.98rem;
 }
 
+/* ---------- rezervare 1 la 1 ---------- */
+
+.bookingCard {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--pen-red);
+  border-radius: 12px;
+  padding: clamp(1.4rem, 4vw, 2.2rem);
+  max-width: 46rem;
+  margin-top: 1.8rem;
+  box-shadow: 0 1px 3px rgba(29, 37, 52, 0.06);
+}
+
+.bookingHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+.bookingTitle {
+  font-family: var(--font-plex-serif), Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+}
+
+.bookingMeta {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.bookingPrice {
+  font-family: var(--font-plex-serif), Georgia, serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--pen-blue);
+  margin: 0;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.bookingPrice span {
+  font-family: var(--font-plex-sans), sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.slotGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.7rem;
+}
+
+.slot {
+  font: inherit;
+  font-size: 0.98rem;
+  text-align: left;
+  background: #fffdf9;
+  border: 1px solid #d8d4ca;
+  border-radius: 9px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.slot:hover {
+  border-color: var(--pen-blue);
+}
+
+.slot:focus-visible {
+  outline: 2px solid var(--pen-blue);
+  outline-offset: 2px;
+}
+
+.slotOn {
+  background: var(--pen-blue);
+  border-color: var(--pen-blue);
+  color: #fff;
+  font-weight: 600;
+}
+
 /* ---------- consent ---------- */
 
 .consentBar {
