@@ -115,9 +115,9 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
       <div className={styles.success} role="status">
         <p className={styles.successTitle}>Gata — ți-am păstrat loc.</p>
         <p className={styles.successBody}>
-          Ești înscris la sesiunea de {sessionLabel}. Te contactez înainte de
+          Ai loc la sesiunea din {sessionLabel}. Te contactez înainte de
           sesiune cu linkul de participare. Dacă între timp vrei să adaugi
-          ceva la ce ai scris, răspunde-mi la emailul de contact.
+          ceva la ce ai scris, răspunde la emailul de confirmare.
         </p>
       </div>
     );

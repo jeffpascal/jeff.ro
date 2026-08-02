@@ -125,9 +125,15 @@ Landing page-ul trebuie să aibă o singură promisiune centrală. Verticalele s
 
 ### Cine nu este publicul inițial
 
+**Actualizare 2 august (decizie Jeff):** aspiranții la antreprenoriat SUNT public
+țintă — oameni care vor să pornească o afacere și se blochează în lucruri simple
+(cunoștințe de marketing, unelte, primii pași) și vor să învețe și să fie la zi
+cu AI. Excludem doar căutarea de îmbogățire rapidă fără muncă, nu intenția de a
+învăța. Landing-ul reflectă asta în „Pentru cine".
+
 - programatori avansați care vor arhitectură AI;
 - oameni interesați doar de noutăți și tool-uri;
-- persoane fără un proiect sau o afacere pe care să aplice;
+- persoane fără un proiect, o afacere sau o intenție reală de a construi;
 - oameni care caută venit pasiv ori promisiuni de îmbogățire;
 - enterprise, în aceeași grupă cu micro-business-uri;
 - profesii cu date foarte sensibile, până când regulile și mediul de lucru sunt definite.

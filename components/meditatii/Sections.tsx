@@ -28,6 +28,7 @@ const PAIN_QUOTES = [
   "Toată lumea vorbește de agenți și automatizări. Eu cu ce încep?",
   "Trebuie să-mi antrenez propriul AI? Nu costă o avere?",
   "Primesc idei bune, dar munca tot la mine rămâne.",
+  "Aș porni ceva al meu, dar mă blochez la marketing și la unelte.",
   "Cursurile pe care le-am găsit nu răspund la cazul meu.",
 ];
 
@@ -98,7 +99,7 @@ export function WhatIs() {
 
 const STEPS: Array<[string, string]> = [
   ["Context", "Spui liber ce faci, ce vrei și ce te blochează. Fără pregătire, fără jargon."],
-  ["Claritate", "Te întreb, una câte una, până când problema și rezultatul dorit sunt limpezi."],
+  ["Claritate", "Îți pun întrebări, una câte una, până când problema și rezultatul dorit sunt limpezi."],
   ["Alegere", "Alegem cea mai simplă unealtă care rezolvă cazul. Nu pornim de la agenți."],
   ["Construcție", "Construim live: o pagină, un workflow, un plan pe care îl poți executa."],
   ["Verificare", "Testăm rezultatul. La bani, date și publicare decide omul, nu AI-ul."],
@@ -183,8 +184,9 @@ export function Calendar() {
         </div>
       ))}
       <p className={styles.calendarNote}>
-        Meditațiile săptămânale pornesc după sesiunea deschisă — în fiecare
-        joi, la 19:00. Calendarul se completează aici, cu date și locuri reale.
+        Meditațiile săptămânale pornesc după sesiunea deschisă — o dată pe
+        săptămână, seara, la 19:00. Calendarul se completează aici, cu date și
+        locuri reale.
       </p>
     </Section>
   );
@@ -241,18 +243,20 @@ export function ForWho() {
         <div className={styles.forWhoYes}>
           <p className={styles.forWhoTitle}>Da, dacă</p>
           <ul className={styles.forWhoList}>
-            <li>Ai o afacere sau o activitate reală, cu clienți.</li>
-            <li>Ai o problemă concretă pentru următoarele 30 de zile.</li>
+            <li>Ai o afacere reală, cu clienți — sau vrei să pornești una
+              și te blochează lucrurile „simple”: marketing, unelte, primii pași.</li>
+            <li>Ai o problemă sau o idee concretă pentru următoarele 30 de zile.</li>
             <li>Ai încercat măcar puțin ChatGPT sau altă unealtă AI.</li>
             <li>Poți lucra 90–120 de minute pe săptămână.</li>
-            <li>Vrei să verifici rezultatele, nu să crezi pe cuvânt.</li>
+            <li>Vrei să înveți, să fii la zi cu AI și să verifici rezultatele,
+              nu să crezi pe cuvânt.</li>
           </ul>
         </div>
         <div className={styles.forWhoNo}>
           <p className={styles.forWhoTitle}>Nu, dacă</p>
           <ul className={styles.forWhoList}>
-            <li>Cauți venit pasiv sau promisiuni de îmbogățire.</li>
-            <li>Vrei doar noutăți și tool-uri, fără un proiect al tău.</li>
+            <li>Cauți îmbogățire rapidă sau venit pasiv, fără muncă.</li>
+            <li>Vrei doar noutăți și tool-uri, fără să aplici pe nimic.</li>
             <li>Ești programator avansat și vrei arhitectură AI.</li>
             <li>Aștepți un „autopilot” care face totul singur.</li>
           </ul>
@@ -274,7 +278,7 @@ export function About() {
         </p>
         <p>
           La meditații nu primești teorie despre AI. Îți arăt exact cum lucrez
-          eu, pe cazul tău, și plecăm amândoi abia când ai ceva ce poți
+          eu, pe cazul tău, și nu ne oprim până nu pleci cu ceva ce poți
           folosi.
         </p>
         <p className={styles.signature}>— Jeff</p>

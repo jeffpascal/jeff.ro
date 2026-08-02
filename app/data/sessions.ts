@@ -4,7 +4,7 @@ export type Session = {
   title: string;
   summary: string;
   /** Local time, Europe/Bucharest */
-  date: string; // ISO, e.g. "2026-08-13T19:00:00+03:00"
+  date: string; // ISO, e.g. "2026-08-11T19:00:00+03:00"
   durationMin: number;
   format: "online";
   priceLei: number; // 0 = gratuit
@@ -62,7 +62,7 @@ const MONTHS = [
   "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie",
 ];
 
-/** "joi, 13 august, 19:00" — formatat pe fusul României, fără dependențe. */
+/** "marți, 11 august, 19:00" — formatat pe fusul României, fără dependențe. */
 export function formatSessionDate(iso: string): string {
   const parts = new Intl.DateTimeFormat("en-GB", {
     timeZone: "Europe/Bucharest",
