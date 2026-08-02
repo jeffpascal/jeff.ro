@@ -792,6 +792,8 @@ GPT Image 2 poate crea ilustrații sau variații, dar nu trebuie să înlocuiasc
 
 ### Plan Meta Ads pe faze
 
+**Decizie Jeff (2 august 2026):** rulăm un test mic de Meta Ads și pentru Sesiunea deschisă #1 (înaintea dovezii pilotului — excepție asumată de la gate-ul de mai jos). Cont: `act_871153088121212` (INEO, RON, token system-user verificat), cu **pixel/dataset nou dedicat jeff.ro** pentru segregare. Rețeaua personală (WhatsApp) rămâne canalul principal; ads-urile completează. Deschis: pagina FB folosită ca identitate a reclamelor (acum doar „INEO Smart Solutions”) și bugetul exact. Planul operațional și reclamele propuse sunt pe `marketing.acasa.jeff.ro`.
+
 #### Faza 0 — dovadă și infrastructură
 
 - 10–15 conversații cu owner-operatori;
