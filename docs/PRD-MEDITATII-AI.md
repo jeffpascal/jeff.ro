@@ -294,7 +294,7 @@ Hot seat-urile nu se înregistrează sau publică fără acord explicit. Demonst
 - mărimea grupei este flexibilă — nu se fixează un plafon rigid; calitatea se protejează prin hot seats și calificare;
 - prima sesiune deschisă este gratuită;
 - plățile se implementează cu **Revolut**, refolosind integrarea completă din template-ul INEO-DECOR (`~/INEO-DECOR/ineo-decor`: create-order, webhook semnat, refund, widgets — verificat);
-- data provizorie a primei sesiuni deschise: **joi, 13 august 2026, 19:00** (se schimbă într-un singur loc, `app/data/sessions.ts`).
+- data primei sesiuni deschise: **marți, 11 august 2026, 19:00** (actualizată de Jeff pe 2 aug; se schimbă într-un singur loc, `app/data/sessions.ts`).
 
 Restul prețurilor rămân ipoteze de test, nu decizii finale.
 
@@ -1003,7 +1003,7 @@ La comanda `începe cu pasul 1`:
 
 Întrebările se parcurg una câte una, în această ordine. Răspunsurile actualizează PRD-ul.
 
-**Răspunse pe 2 august 2026:** Q6 — gratuită la prima ediție; Q8 — flexibilă, fără plafon rigid; Q9 — provizoriu joi, 13 august 2026, 19:00; Q13 — ambele modele (290 lei/sesiune + pachet 790 lei pilot); Q15 — Revolut, refolosind integrarea INEO-DECOR; Q17 — înlocuire completă, vechiul landing arhivat la `/ai-commerce` cu link în footer. **Întrebare nouă:** ce cont Google Ads folosim pentru jeff.ro — unul nou sau sub managerul existent 1011600319?
+**Răspunse pe 2 august 2026:** Q6 — gratuită la prima ediție; Q8 — flexibilă, fără plafon rigid; Q9 — marți, 11 august 2026, 19:00; Q13 — ambele modele (290 lei/sesiune + pachet 790 lei pilot); Q15 — Revolut, refolosind integrarea INEO-DECOR; Q17 — înlocuire completă, vechiul landing arhivat la `/ai-commerce` cu link în footer. **Întrebare nouă:** ce cont Google Ads folosim pentru jeff.ro — unul nou sau sub managerul existent 1011600319?
 
 ### Produs și public
 
