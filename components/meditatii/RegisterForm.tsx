@@ -27,6 +27,12 @@ function readUtm() {
   };
 }
 
+function readCookie(name: string): string {
+  if (typeof document === "undefined") return "";
+  const m = document.cookie.match(new RegExp("(?:^|; )" + name + "=([^;]*)"));
+  return m ? decodeURIComponent(m[1]) : "";
+}
+
 export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -77,11 +83,20 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
           landingPath: typeof window !== "undefined" ? window.location.pathname : "",
           eventId,
           trackingConsent: getConsent() === "granted",
+          query: typeof window !== "undefined" ? window.location.search.slice(0, 600) : "",
+          fbc: readCookie("_fbc"),
+          fbp: readCookie("_fbp"),
         }),
       });
       if (res.ok) {
+        const data = await res.json().catch(() => ({}));
         setState("done");
-        if (getConsent() === "granted" && typeof window !== "undefined" && window.fbq) {
+        if (
+          data?.created !== false &&
+          getConsent() === "granted" &&
+          typeof window !== "undefined" &&
+          window.fbq
+        ) {
           window.fbq("track", "Lead", {}, { eventID: eventId });
         }
       } else {
@@ -137,7 +152,7 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
         </div>
         <div className={styles.field}>
           <label className={styles.label} htmlFor="reg-phone">
-            Telefon / WhatsApp
+            Telefon / WhatsApp (pentru reminder)
           </label>
           <input
             id="reg-phone"
@@ -161,6 +176,7 @@ export default function RegisterForm({ sessionSlug, sessionLabel }: Props) {
             value={business}
             onChange={(e) => setBusiness(e.target.value)}
             placeholder="ex: restaurant în Cluj, sunt proprietar"
+            required
           />
         </div>
         <div className={`${styles.field} ${styles.fieldFull}`}>
