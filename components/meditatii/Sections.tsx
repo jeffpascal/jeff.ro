@@ -346,7 +346,16 @@ export function About() {
   return (
     <Section label="cine te ajută">
       <h2 className={styles.h2}>Lucrezi direct cu mine</h2>
-      <div className={styles.prose}>
+      <div className={styles.aboutGrid}>
+        <Image
+          className={styles.aboutPhoto}
+          src="/jeff.jpg"
+          alt="Jeff, la biroul lui de lucru."
+          width={1024}
+          height={1280}
+          sizes="(max-width: 700px) 15rem, 15rem"
+        />
+        <div className={styles.prose}>
         <p>
           Sunt Jeff. Programator, am lucrat la IBM. Acum construiesc zilnic cu
           AI: magazine online, automatizări, campanii de marketing — chestii
@@ -358,7 +367,8 @@ export function About() {
           eu, pe cazul tău, și nu ne oprim până nu pleci cu ceva ce poți
           folosi.
         </p>
-        <p className={styles.signature}>— Jeff</p>
+          <p className={styles.signature}>— Jeff</p>
+        </div>
       </div>
     </Section>
   );

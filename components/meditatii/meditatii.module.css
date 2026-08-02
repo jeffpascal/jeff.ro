@@ -839,6 +839,32 @@
 
 /* ---------- despre ---------- */
 
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: 2.2rem;
+  align-items: start;
+  max-width: 52rem;
+}
+
+.aboutPhoto {
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+  .aboutPhoto {
+    max-width: 15rem;
+  }
+}
+
 .signature {
   font-family: var(--font-plex-serif), Georgia, serif;
   font-style: italic;
