@@ -84,9 +84,10 @@ export default function Confidentialitate() {
               <p>
                 <strong>Drepturile tale.</strong> Poți cere oricând accesul la
                 datele tale, corectarea sau ștergerea lor, și îți poți retrage
-                consimțământul. Dacă ceva nu ți se pare în regulă, ne poți
-                scrie sau poți depune o plângere la ANSPDCP
-                (dataprotection.ro).
+                consimțământul — pașii exacți sunt pe pagina de{" "}
+                <Link href="/stergere-date">ștergere a datelor</Link>. Dacă
+                ceva nu ți se pare în regulă, ne poți scrie sau poți depune o
+                plângere la ANSPDCP (dataprotection.ro).
               </p>
               <p>
                 Ultima actualizare: 2 august 2026. Documentul va fi revizuit,
