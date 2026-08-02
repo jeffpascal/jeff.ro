@@ -42,3 +42,4 @@ next-env.d.ts
 
 # OMC session state
 /.omc/
+.omc/
