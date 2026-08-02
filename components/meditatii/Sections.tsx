@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { publishedSessions, formatSessionDate } from "../../app/data/sessions";
 import styles from "./meditatii.module.css";
 
@@ -151,6 +152,19 @@ export function DemoSession() {
         <li>Un caz real, lucrat cap-coadă, în direct.</li>
         <li>Întrebările tale, cu răspunsuri pe cazul tău.</li>
       </ul>
+      <figure className={styles.methodPhoto}>
+        <Image
+          src="/metoda-caiet-pagina.jpg"
+          alt="Un caiet cu schița unei pagini, lângă un laptop pe care aceeași pagină e deja publicată."
+          width={1024}
+          height={1024}
+          sizes="(max-width: 700px) 100vw, 46rem"
+        />
+        <figcaption className={styles.methodPhotoCaption}>
+          Asta e distanța pe care o parcurgem în sesiune: din schița de pe
+          caiet, într-o pagină publicată.
+        </figcaption>
+      </figure>
       <div className={styles.ideaCallout}>
         <p className={styles.ideaCalloutTitle}>O singură idee se alege. Poate fi a ta.</p>
         <p className={styles.ideaCalloutBody}>

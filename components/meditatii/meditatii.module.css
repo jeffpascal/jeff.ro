@@ -26,7 +26,7 @@
   font-family: var(--font-plex-sans), system-ui, -apple-system, sans-serif;
   font-size: 1.0625rem;
   line-height: 1.65;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: clip;
 }
 
@@ -461,6 +461,25 @@
   color: var(--ink-soft);
   font-family: var(--font-plex-mono), monospace;
   max-width: 46rem;
+}
+
+.methodPhoto {
+  max-width: 46rem;
+  margin-top: 2rem;
+}
+
+.methodPhoto img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+.methodPhotoCaption {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-top: 0.7rem;
 }
 
 .agendaList {
