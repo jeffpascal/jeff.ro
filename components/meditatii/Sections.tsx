@@ -148,6 +148,17 @@ export function DemoSession() {
         <li>Un caz real, lucrat cap-coadă, în direct.</li>
         <li>Întrebările tale, cu răspunsuri pe cazul tău.</li>
       </ul>
+      <div className={styles.ideaCallout}>
+        <p className={styles.ideaCalloutTitle}>O singură idee se alege. Poate fi a ta.</p>
+        <p className={styles.ideaCalloutBody}>
+          La înscriere ne spui ce vrei să rezolvi. Din toate ideile trimise
+          aleg una și o construim live, în sesiune — de la vorbă la ceva
+          publicat. Cu cât e mai concretă, cu atât are șanse mai mari.
+        </p>
+        <a href="#inscriere" className={styles.btnPrimary}>
+          Trimite-ți ideea →
+        </a>
+      </div>
     </Section>
   );
 }

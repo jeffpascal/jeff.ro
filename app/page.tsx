@@ -78,7 +78,9 @@ export default function Home() {
           {session
             ? `Te înscrii la sesiunea deschisă din ${formatSessionDate(session.date)} — online și gratuită.`
             : "Lasă-mi contextul tău și te anunț când se deschide următoarea sesiune."}{" "}
-          Nu e nevoie de nicio pregătire: scrie cu cuvintele tale.
+          Nu e nevoie de nicio pregătire: scrie cu cuvintele tale. Ideea pe
+          care o descrii intră direct în selecția pentru lucrul live din
+          sesiune.
         </p>
         <RegisterForm
           sessionSlug={session?.slug ?? "urmatoarea-sesiune"}
