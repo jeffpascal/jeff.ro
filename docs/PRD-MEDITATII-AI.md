@@ -1,7 +1,7 @@
 # PRD — Meditații AI pentru afaceri
 
-**Versiune:** 0.1 — discovery  
-**Data:** 2 august 2026  
+**Versiune:** 0.2  
+**Data:** 2 august 2026 · **Ultima actualizare:** 9 august 2026 — recalibrare economică pe datele campaniei (secțiunile 7 și 14)  
 **Owner:** Jeff  
 **Stare:** draft de aliniere; nu autorizează lansarea reclamelor sau cheltuieli  
 **Produs:** sesiuni live, practice, în grup mic, pentru aplicarea AI pe probleme reale de business
@@ -302,6 +302,21 @@ Hot seat-urile nu se înregistrează sau publică fără acord explicit. Demonst
 - plățile se implementează cu **Revolut**, refolosind integrarea completă din template-ul INEO-DECOR (`~/INEO-DECOR/ineo-decor`: create-order, webhook semnat, refund, widgets — verificat);
 - data primei sesiuni deschise: **marți, 11 august 2026, 19:00** (actualizată de Jeff pe 2 aug; se schimbă într-un singur loc, `app/data/sessions.ts`).
 
+**Actualizare 9 august 2026 — recalibrare pe datele campaniei (40 de lead-uri):**
+
+Formularele arată două piețe distincte, nu una:
+
+1. **„Vreau să învăț”** (~jumătate din lead-uri) — validează grupa. Experiență: 17 chat-only, 17 regular, 3 avansați, 3 multi-tool.
+2. **„Vreau să-mi faceți voi”** (6–8 lead-uri) — cer explicit un livrabil: site finalizat, marketplace, automatizare completă, „să plătesc pe cineva să preia programarea”. Planul inițial amâna serviciile pentru „ulterior”; cererea există deja, iar costul de livrare e minim (template INEO-DECOR + pipeline-ul automatizat de lansare site + Google stack).
+
+Consecințe asupra modelului:
+
+- **Sprintul se productizează și se vinde acum**, nu după validarea grupei: „Site publicat + promovare configurată” la **2.500–3.500 lei** (4.900–9.900 depășește pragul micro-business-ului român; la cost de livrare aproape zero, marja rămâne excelentă). Se vinde prin telefon/follow-up individual — niciodată pitch-uit în sesiunea deschisă (o singură ofertă pe scenă: grupa).
+- **290 lei/sesiune se retrogradează** la „intrare târzie dacă rămân locuri”: mulți au o singură problemă concretă și ar cumpăra o sesiune în locul pachetului.
+- **Țintă realistă de pilot din această cohortă:** bazin calificat ~20–25 → ~10–14 prezenți → **3–5 plăți la 790 lei** (2.400–4.000 lei), plus 1–2 sprinturi (2.500–7.000 lei) și eventual un diagnostic (1.490 lei). Total pilot realist: **~5.000–12.500 lei** — motorul principal pe termen scurt sunt serviciile, nu volumul grupei.
+- **Omogenitate:** pentru pilot, o singură grupă cu hot seats tematizate; dacă cererea plătită depășește 8–10 locuri, a doua grupă se separă pe nivel („primii pași” vs. „de la chat la agenți”), iar cea avansată susține direct 990 lei.
+- **CPL realizat: ~9–10 lei** (sub ținta de 15) — achiziția funcționează; calitatea se filtrează downstream, nu din reclamă.
+
 Restul prețurilor rămân ipoteze de test, nu decizii finale.
 
 | Nivel | Ofertă | Preț recomandat de test |
@@ -311,7 +326,8 @@ Restul prețurilor rămân ipoteze de test, nu decizii finale.
 | Produs principal | 4 sesiuni live, grupă 8–10 | 790 lei pilot; apoi test 990 lei |
 | Acces punctual | O sesiune, dacă există loc | 290 lei |
 | Diagnostic individual | Pregătire + 90 min + hartă de implementare personalizată | 1.490 lei |
-| Sprint de implementare | Un workflow/prototip cu scop fix și predare | 4.900–9.900 lei |
+| Sprint productizat (9 aug) | Site publicat + promovare configurată (Google/Meta), predare | 2.500–3.500 lei |
+| Sprint de implementare | Workflow/prototip custom cu scop fix și predare (scope mare) | 4.900–9.900 lei |
 | B2B ulterior | Clinică privată pentru o echipă mică | 2.500–4.500 lei |
 
 Dacă sesiunea introductivă ajunge la 59 lei, suma poate fi creditată integral în pachetul de patru sesiuni. Expirarea creditului este legată de începerea grupei, nu de o urgență artificială.
@@ -346,6 +362,14 @@ Reclamă / conținut / recomandare
   → sesiune deschisă
   → pachet de 4 meditații
   → clinică alumni / diagnostic / sprint, dacă există potrivire
+
+Ramură paralelă (9 aug) — lead-uri cu cerere de livrabil
+(formularul cere un REZULTAT, nu învățare):
+  → apel scurt de încălzire înainte de sesiune (fără pitch)
+  → sesiunea deschisă ca demonstrație
+  → apel de vânzare a doua zi după sesiune
+  → sprint productizat sau diagnostic
+  (nu se așteaptă conversia lor prin grupă)
 ```
 
 ### Calificare
@@ -371,7 +395,8 @@ Rutare:
 
 - 7–10: grupă sau diagnostic;
 - 4–6: sesiune deschisă;
-- 0–3: resursă gratuită și nurture.
+- 0–3: resursă gratuită și nurture;
+- cerere explicită de livrabil (indiferent de scor): contact telefonic direct pentru sprint/diagnostic, în paralel cu invitația la sesiune.
 
 ---
 
@@ -853,6 +878,19 @@ Referințe Meta:
 - [Meta — alegerea obiectivului](https://www.facebook.com/business/ads/ad-objectives)
 - [Meta — website lead forms](https://www.facebook.com/business/ads/ad-objectives/lead-generation/lead-ads-with-forms)
 - [Meta — Conversions API](https://www.facebook.com/business/help/AboutConversionsAPI)
+
+### Follow-up Sesiunea deschisă #1 (adăugat 9 august 2026)
+
+Secvența de conversie în jurul sesiunii din 11 august, pe cele 40 de lead-uri existente (toate cu status `new`, niciunul contactat):
+
+- **Luni + marți dimineața — email tuturor:** confirmarea orei + „răspunde cu cazul tău dacă vrei să fie printre cele discutate live”. Crește prezența și alimentează segmentul „Și cazul tău?” din sesiune.
+- **Luni — apel/WhatsApp scurt către lead-urile de servicii, FĂRĂ pitch:** „am văzut ce ai scris în formular, cazul tău e interesant, vino marți că ating exact genul ăsta de problemă.” Scop: prezență + relație. Excepție: Sebastian (vrea explicit să plătească pe cineva) — lui i se poate face oferta direct luni; sesiunea e irelevantă pentru el.
+- **Marți, la max. 1h după sesiune — email:** rezumat + oferta grupei + link de plată + deadline real legat de data de start a grupei.
+- **Miercuri — apelul de vânzare către lead-urile de servicii**, cât demo-ul e proaspăt: au văzut metoda live, obiecția „poate fac singur” s-a rezolvat singură. Ofertă: sprint productizat 2.500–3.500 lei sau diagnostic 1.490 lei.
+- **Joi — email 2:** un caz concret povestit (ce s-a construit live + ce urmează în grupă) + obiecțiile principale: „nu sunt tehnic” (jumătate din sală e chat-only), „n-am timp” (90 min/săptămână), preț.
+- **Duminică — last call onest:** „mâine închid înscrierile pentru grupa asta; următoarea va fi la 990.”
+
+Lead-urile de servicii din cohorta #1: Sebastian (magazin jucării — delegare completă), Sc.Ilca (site + reclamă produs OSIM), Veaceslav (marketplace cursuri), Ciprian (site brokeraj), Oszkar (automatizare flux e-commerce), Agache (candidat diagnostic — caz juridic, utilizator avansat), Patrașcu Antonio (0770845375, pensiune Agigea — fit natural pentru suita VIFA: automatizare rezervări/recepție/telefonie deja construită pentru Vila Franceză; de abordat cu demo-ul VIFA, nu cu sprintul de site).
 
 ### Funnel metrics
 

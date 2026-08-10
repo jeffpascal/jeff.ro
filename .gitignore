@@ -43,3 +43,8 @@ next-env.d.ts
 # OMC session state
 /.omc/
 .omc/
+
+# date lead-uri + loguri de trimitere (PII) — nu intra in git
+/scripts/reminder-emails.json
+/scripts/reminder-sendlog-*.json
+/scripts/reminder-preview.html

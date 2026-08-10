@@ -16,6 +16,9 @@ export default function Booking() {
   const [website, setWebsite] = useState(""); // honeypot
   const [state, setState] = useState<"idle" | "loading" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  // Fallback vizibil: pe unele mobile redirectul nu pornește (văzut live pe iOS
+  // Safari) — păstrăm linkul de checkout ca ancoră pe care userul poate apăsa.
+  const [payUrl, setPayUrl] = useState("");
 
   useEffect(() => {
     let alive = true;
@@ -54,7 +57,8 @@ export default function Booking() {
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data?.checkoutUrl) {
-        window.location.href = data.checkoutUrl;
+        setPayUrl(data.checkoutUrl);
+        window.location.assign(data.checkoutUrl);
         return;
       }
       setErrorMsg(data?.error || "Nu am putut porni plata. Încearcă din nou.");
@@ -146,6 +150,12 @@ export default function Booking() {
                 {state === "loading" ? "Se deschide plata…" : `Rezervă și plătește ${price} lei`}
               </button>
             </div>
+            {payUrl && (
+              <p className={styles.formHint} style={{ marginTop: "0.8rem" }} role="alert">
+                Nu s-a deschis pagina de plată?{" "}
+                <a href={payUrl}>Apasă aici ca să o deschizi →</a>
+              </p>
+            )}
             {state === "error" ? (
               <p className={styles.formError} style={{ marginTop: "0.8rem" }} role="alert">
                 {errorMsg}

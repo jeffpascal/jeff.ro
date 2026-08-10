@@ -33,12 +33,36 @@ export const sessions: Session[] = [
     kind: "meditatie",
     title: "Meditația #1: din idee vagă, în brief pe care AI-ul îl execută",
     summary:
-      "Prima meditație din grupă: lucrăm pe cazurile participanților, hot seat cu hot seat.",
-    date: "2026-08-20T19:00:00+03:00",
-    durationMin: 90,
+      "Prima meditație din grupa pilot: lucrăm pe cazurile participanților, hot seat cu hot seat.",
+    date: "2026-08-18T19:00:00+03:00",
+    durationMin: 75,
     format: "online",
     priceLei: 290,
-    status: "draft",
+    status: "published",
+  },
+  {
+    slug: "meditatia-2",
+    kind: "meditatie",
+    title: "Meditația #2: construim asset-ul — de la brief la publicat",
+    summary:
+      "A doua meditație din grupa pilot: construcție live pe cazurile din grup.",
+    date: "2026-08-25T19:00:00+03:00",
+    durationMin: 75,
+    format: "online",
+    priceLei: 290,
+    status: "published",
+  },
+  {
+    slug: "meditatia-3",
+    kind: "meditatie",
+    title: "Meditația #3: mesaj, promovare și primul workflow repetabil",
+    summary:
+      "A treia meditație din grupa pilot: promovare și workflow-uri repetabile pe cazurile din grup.",
+    date: "2026-09-01T19:00:00+03:00",
+    durationMin: 75,
+    format: "online",
+    priceLei: 290,
+    status: "published",
   },
 ];
 

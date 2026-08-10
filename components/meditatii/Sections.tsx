@@ -234,12 +234,13 @@ export function Pricing() {
         </div>
         <div className={`${styles.priceCard} ${styles.priceCardFeatured}`}>
           <span className={styles.priceTag}>recomandat</span>
-          <p className={styles.priceName}>Pachet 4 meditații</p>
+          <p className={styles.priceName}>Grupa pilot — 3 meditații</p>
           <p className={styles.priceValue}>
-            790 lei<span className={styles.priceUnit}> · ~198 lei / sesiune</span>
+            790 lei<span className={styles.priceUnit}> · maximum 5 locuri</span>
           </p>
           <p className={styles.priceDesc}>
-            O lună de lucru pe cazul tău, cu hot seat garantat. Preț de pilot.
+            Trei săptămâni de lucru pe cazul tău, cu hot seat garantat.{" "}
+            <a href="/grupa">Detalii și înscriere →</a>
           </p>
         </div>
       </div>
