@@ -44,8 +44,8 @@ export default function Hero() {
             <a href="#inscriere" className={styles.btnPrimary}>
               Spune-mi ce vrei să rezolvi →
             </a>
-            <a href="#calendar" className={styles.btnGhost}>
-              Vezi calendarul
+            <a href="/grupa" className={styles.btnGhost}>
+              Vezi grupa pilot →
             </a>
           </div>
         </div>

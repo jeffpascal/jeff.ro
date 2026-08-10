@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Serif, IBM_Plex_Mono } from "next/font/google";
 import { Section } from "../../components/meditatii/Sections";
 import SiteFooter from "../../components/meditatii/SiteFooter";
+import GrupaCheckout from "../../components/meditatii/GrupaCheckout";
 import { formatSessionDate } from "../data/sessions";
 import { GRUPA } from "../data/grupa";
 import styles from "../../components/meditatii/meditatii.module.css";
@@ -59,13 +60,6 @@ const FAQ: Array<[string, string]> = [
 ];
 
 export default function GrupaPage() {
-  const cta = GRUPA.paymentLink
-    ? { href: GRUPA.paymentLink, label: `Rezervă locul — plătește ${GRUPA.priceLei} lei` }
-    : {
-        href: `mailto:${GRUPA.contactEmail}?subject=${encodeURIComponent("Vreau un loc în grupa pilot")}`,
-        label: "Rezervă locul — scrie-mi acum",
-      };
-
   return (
     <main
       className={`${plexSans.variable} ${plexSerif.variable} ${plexMono.variable} ${styles.page}`}
@@ -191,17 +185,7 @@ export default function GrupaPage() {
               Locul e confirmat în ordinea plății. Dacă grupa nu pornește,
               primești toți banii înapoi.
             </p>
-            <div className={styles.ctaRow}>
-              <a href={cta.href} className={styles.btnPrimary}>
-                {cta.label}
-              </a>
-            </div>
-            {!GRUPA.paymentLink && (
-              <p className={styles.priceFootnote}>
-                Îți răspund personal cu linkul de plată — de obicei în câteva
-                minute. Poți răspunde și direct la emailul primit de la mine.
-              </p>
-            )}
+            <GrupaCheckout priceLei={GRUPA.priceLei} />
           </div>
         </div>
         <p className={styles.priceFootnote}>

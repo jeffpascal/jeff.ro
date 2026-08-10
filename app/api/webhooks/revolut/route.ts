@@ -52,6 +52,112 @@ export async function POST(request: Request) {
     console.error("Webhook Mongo error:", err);
     return NextResponse.json({ error: "db unavailable" }, { status: 503 });
   }
+  // Comenzile pentru grupa pilot au ref cu prefix "grupa-" și trăiesc în
+  // colecția lor; fluxul 1 la 1 rămâne neatins mai jos.
+  if (ref.startsWith("grupa-")) {
+    const orders = db.collection("grupa_orders");
+    if (DEAD.has(event)) {
+      await orders.updateOne(
+        { ref, status: "pending_payment" },
+        { $set: { status: "abandoned", abandonReason: event, abandonedAt: new Date() },
+          $unset: { holdExpiresAt: "" } }
+      );
+      return NextResponse.json({ ok: true });
+    }
+    if (!PAID.has(event)) return NextResponse.json({ ok: true, ignored: event });
+
+    const orderDoc = await orders.findOne({ ref });
+    if (!orderDoc) {
+      console.error("Webhook pentru comandă grupa inexistentă:", ref, payload.order_id);
+      return NextResponse.json({ ok: true, ignored: "unknown ref" });
+    }
+    if (!payload.order_id) return NextResponse.json({ ok: true, ignored: "no order id" });
+
+    try {
+      const order = await retrieveRevolutOrder(payload.order_id);
+      const okAll =
+        order.state === "completed" &&
+        Number(order.amount) === Number(orderDoc.priceLei) * 100 &&
+        order.currency === "RON" &&
+        order.merchant_order_data?.reference === ref;
+      if (!okAll) {
+        console.error("Verificare Revolut grupa eșuată:", {
+          ref, state: order.state, amount: order.amount, currency: order.currency,
+        });
+        return NextResponse.json({ ok: true, ignored: "verification failed" });
+      }
+    } catch (err) {
+      console.error("Revolut retrieve error (grupa):", err);
+      return NextResponse.json({ error: "verify failed" }, { status: 503 });
+    }
+
+    const gres = await orders.findOneAndUpdate(
+      { ref, status: { $ne: "confirmed" } },
+      {
+        $set: {
+          status: "confirmed", paidAt: new Date(), updatedAt: new Date(),
+          "payment.state": event, "payment.orderId": payload.order_id,
+        },
+        $unset: { holdExpiresAt: "" },
+      },
+      { returnDocument: "after" }
+    );
+    type GOrder = { name?: string; email?: string; phone?: string; priceLei?: number };
+    const graw = gres as unknown as (GOrder & { value?: GOrder }) | null;
+    const g: GOrder | null = graw?.value ?? graw;
+    if (!g?.email) return NextResponse.json({ ok: true, ignored: "already handled" });
+
+    // Lead-ul devine client — vizibil pe dashboardul de marketing.
+    try {
+      await db.collection("leads").updateOne(
+        { emailNormalized: g.email.toLowerCase() },
+        { $set: { status: "customer", updatedAt: new Date() } }
+      );
+    } catch (err) {
+      console.error("Lead->customer update error:", err);
+    }
+
+    const gTo = (process.env.WAITLIST_TO || "jeffpascal96@gmail.com")
+      .split(",").map((s) => s.trim()).filter(Boolean);
+    const gFrom = process.env.WAITLIST_FROM || "Meditații AI <comenzi@ineo.annops.com>";
+    const gConfirmFrom =
+      process.env.CONFIRM_FROM || "Jeff — Meditații AI <meditatii@ineo.annops.com>";
+
+    try {
+      await sendEmail({
+        from: gFrom, to: gTo, replyTo: g.email,
+        subject: `LOC PLĂTIT în grupa pilot — ${g.name} (${g.priceLei} lei)`,
+        html: `<div style="font-family:system-ui,sans-serif;line-height:1.6">
+          <h2 style="margin:0 0 8px">Loc plătit în grupa pilot</h2>
+          <p style="margin:0 0 4px"><strong>Cine:</strong> ${esc(g.name ?? "")} · ${esc(g.email)} · ${esc(g.phone ?? "")}</p>
+          <p style="margin:0 0 4px"><strong>Sumă:</strong> ${g.priceLei} lei</p>
+        </div>`,
+      });
+    } catch (err) {
+      console.error("Notificare grupa error:", err);
+    }
+
+    try {
+      await sendEmail({
+        from: gConfirmFrom, to: [g.email], replyTo: gTo,
+        subject: "Confirmat: locul tău în grupa pilot Meditații AI",
+        html: `<div style="font-family:system-ui,sans-serif;line-height:1.6;color:#1d2534">
+          <h2 style="margin:0 0 10px">Locul tău e confirmat.</h2>
+          <p style="margin:0 0 10px">Grupa pilot Meditații AI — 3 sesiuni live de 75 de minute,
+          marți seara la 19:00: 18 august, 25 august și 1 septembrie.</p>
+          <p style="margin:0 0 10px">Linkul de conectare îl primești pe email cu o zi înainte de fiecare
+          sesiune. Până atunci, răspunde la acest email cu 2–3 rânduri despre cazul pe care vrei
+          să-l lucrăm — hot seat-ul tău e garantat.</p>
+          <p style="margin:0;color:#4e586e">— Jeff · <a href="https://jeff.ro" style="color:#2247c4">jeff.ro</a></p>
+        </div>`,
+      });
+    } catch (err) {
+      console.error("Confirmare grupa error:", err);
+    }
+
+    return NextResponse.json({ ok: true });
+  }
+
   const bookings = db.collection("bookings");
 
   if (DEAD.has(event)) {

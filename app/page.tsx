@@ -15,7 +15,6 @@ import {
   Faq,
 } from "../components/meditatii/Sections";
 import RegisterForm from "../components/meditatii/RegisterForm";
-import Booking from "../components/meditatii/Booking";
 import MetaTracking from "../components/meditatii/MetaTracking";
 import SiteFooter from "../components/meditatii/SiteFooter";
 import { nextSession, formatSessionDate } from "./data/sessions";
@@ -75,16 +74,6 @@ export default function Home() {
       <ForWho />
       <About />
       <Faq />
-
-      <Section label="1 la 1" id="sesiune-1-la-1">
-        <h2 className={styles.h2}>Vrei doar cu mine, o oră?</h2>
-        <p className={styles.lead}>
-          Dacă nu vrei grupă și ai o problemă pe care vrei s-o rezolvi acum, ne
-          așezăm o oră, doar noi doi, pe cazul tău. Vii cu problema, pleci cu
-          următorul pas clar sau cu lucrul construit.
-        </p>
-        <Booking />
-      </Section>
 
       <Section label="înscriere" id="inscriere">
         <h2 className={styles.h2}>Spune-mi ce vrei să rezolvi</h2>
