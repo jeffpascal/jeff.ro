@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./meditatii.module.css";
 
 /** Checkout pentru grupa pilot: nume + contact → plată Revolut.
  *  Aceleași convenții ca Booking (honeypot, fallback vizibil pentru redirect). */
 export default function GrupaCheckout({ priceLei }: { priceLei: number }) {
-  const [left, setLeft] = useState<number | null>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -14,17 +13,6 @@ export default function GrupaCheckout({ priceLei }: { priceLei: number }) {
   const [state, setState] = useState<"idle" | "loading" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [payUrl, setPayUrl] = useState("");
-
-  useEffect(() => {
-    let alive = true;
-    fetch("/api/grupa")
-      .then((r) => r.json())
-      .then((d) => alive && setLeft(typeof d.left === "number" ? d.left : null))
-      .catch(() => alive && setLeft(null));
-    return () => {
-      alive = false;
-    };
-  }, []);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,25 +41,8 @@ export default function GrupaCheckout({ priceLei }: { priceLei: number }) {
     }
   };
 
-  if (left === 0) {
-    return (
-      <p className={styles.formHint}>
-        Locurile din grupa asta s-au ocupat. Scrie-mi la{" "}
-        <a href="mailto:jeffpascal96@gmail.com?subject=Lista%20de%20a%C8%99teptare%20grupa">
-          jeffpascal96@gmail.com
-        </a>{" "}
-        și te anunț primul când deschid următoarea grupă.
-      </p>
-    );
-  }
-
   return (
     <form onSubmit={submit}>
-      {typeof left === "number" && left > 0 && (
-        <p className={styles.formHint} style={{ marginBottom: "0.8rem" }}>
-          {left === 1 ? "A mai rămas 1 loc." : `Au mai rămas ${left} locuri din 5.`}
-        </p>
-      )}
       <div className={styles.formGrid}>
         <div className={styles.field}>
           <label className={styles.label} htmlFor="g-name">Numele tău</label>

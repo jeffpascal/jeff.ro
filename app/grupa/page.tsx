@@ -115,7 +115,7 @@ export default function GrupaPage() {
       </section>
 
       <Section label="ce primești">
-        <h2 className={styles.h2}>Nu un curs. Lucru pe afacerea ta.</h2>
+        <h2 className={styles.h2}>Nu un curs.</h2>
         <div className={styles.priceGrid}>
           <div className={styles.priceCard}>
             <p className={styles.priceName}>Hot seat garantat</p>
@@ -199,18 +199,24 @@ export default function GrupaPage() {
         <h2 className={styles.h2}>E pentru tine dacă…</h2>
         <div className={styles.prose}>
           <p>
-            …ai o afacere, un rol sau un proiect real și o problemă concretă la
-            care vrei AI-ul pus la treabă în următoarele 30 de zile — un site,
-            o automatizare, promovare, un proces care îți mănâncă timp.
+            …ai o afacere sau un rol real și o problemă concretă la care vrei
+            AI-ul pus la treabă în următoarele 30 de zile — un site, o
+            automatizare, promovare, un proces care îți mănâncă timp.
+          </p>
+          <p>
+            …sau abia vrei să începi. N-ai încă firmă — ai o idee, un proiect
+            personal sau doar dorința de a învăța lucrând. Începem drumul tău
+            antreprenorial pe loc: site-ul și promovarea lui pot porni chiar
+            din prima sesiune.
           </p>
           <p>
             …ai încercat deja ChatGPT sau Claude și ai rămas cu senzația că
             „răspunde frumos, dar munca tot la mine rămâne”.
           </p>
           <p>
-            <strong>Nu e pentru tine</strong> dacă vrei doar să te uiți, cauți
-            venit pasiv fără muncă, sau vrei un curs video pe care să-l parcurgi
-            cândva. Aici se lucrează, pe cazuri reale, cu numele tău pe ele.
+            <strong>Nu e pentru tine</strong> dacă vrei doar să te uiți sau
+            cauți venit pasiv fără muncă. Aici se lucrează, pe proiecte reale,
+            cu numele tău pe ele.
           </p>
         </div>
       </Section>

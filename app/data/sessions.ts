@@ -31,7 +31,7 @@ export const sessions: Session[] = [
   {
     slug: "meditatia-1",
     kind: "meditatie",
-    title: "Meditația #1: din idee vagă, în brief pe care AI-ul îl execută",
+    title: "Meditația #1: de la proiect la lansare — site, marketing și automatizări",
     summary:
       "Prima meditație din grupa pilot: lucrăm pe cazurile participanților, hot seat cu hot seat.",
     date: "2026-08-18T19:00:00+03:00",
@@ -43,7 +43,7 @@ export const sessions: Session[] = [
   {
     slug: "meditatia-2",
     kind: "meditatie",
-    title: "Meditația #2: construim asset-ul — de la brief la publicat",
+    title: "Meditația #2: de la proiect la lansare — site, marketing și automatizări",
     summary:
       "A doua meditație din grupa pilot: construcție live pe cazurile din grup.",
     date: "2026-08-25T19:00:00+03:00",
@@ -55,7 +55,7 @@ export const sessions: Session[] = [
   {
     slug: "meditatia-3",
     kind: "meditatie",
-    title: "Meditația #3: mesaj, promovare și primul workflow repetabil",
+    title: "Meditația #3: de la proiect la lansare — site, marketing și automatizări",
     summary:
       "A treia meditație din grupa pilot: promovare și workflow-uri repetabile pe cazurile din grup.",
     date: "2026-09-01T19:00:00+03:00",

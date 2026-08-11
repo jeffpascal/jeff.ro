@@ -26,7 +26,7 @@ if (SEND && !MEETING_LINK) {
 
 const FROM = "Jeff — Meditații AI <meditatii@ineo.annops.com>";
 const REPLY_TO = "jeffpascal96@gmail.com";
-const SUBJECT = "Linkul pentru mâine seară — sesiunea deschisă, marți 19:00";
+const SUBJECT = "Linkul pentru diseară — sesiunea deschisă, azi la 19:00";
 
 // Google Calendar: 11 aug 19:00–20:15 Europe/Bucharest (16:00–17:15 UTC)
 const gcal =
@@ -46,7 +46,7 @@ function render(lead, link) {
   return `
   <div style="font-family:system-ui,sans-serif;line-height:1.6;color:#1d2534;max-width:560px">
     <p style="margin:0 0 14px">${salut}</p>
-    <p style="margin:0 0 14px"><strong>Mâine seară ne vedem</strong> — marți, 11 august, 19:00 (75 de minute, online).</p>
+    <p style="margin:0 0 14px"><strong>Diseară ne vedem</strong> — azi, marți 11 august, 19:00 (75 de minute, online).</p>
     <p style="margin:0 0 14px;font-size:17px"><a href="${esc(link || "#LINK_LIPSA")}" style="color:#2247c4"><strong>Linkul de participare →</strong></a></p>
     <p style="margin:0 0 14px">${esc(lead.personal)}</p>
     <p style="margin:0 0 14px">Dacă vrei ca al tău să fie printre cazurile discutate live, răspunde la acest email cu încă 2–3 detalii despre el.</p>

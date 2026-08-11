@@ -80,13 +80,8 @@ export async function POST(request: Request) {
     const db = await dbPromise;
     const orders = db.collection("grupa_orders");
 
-    const taken = await seatsTaken(db);
-    if (taken >= GRUPA.seats) {
-      return NextResponse.json(
-        { error: "Locurile s-au ocupat. Scrie-mi și te pun pe lista pentru următoarea grupă." },
-        { status: 409 }
-      );
-    }
+    // Fără plafon la cumpărare (decizie 11 aug): copy-ul spune 5 locuri,
+    // dar dacă plătesc mai mulți, toți sunt bineveniți. GET rămâne pe numărat.
 
     // Un singur loc activ per email — evită dublurile la refresh/reîncercare.
     const existing = await orders.findOne({
