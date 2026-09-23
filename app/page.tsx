@@ -30,6 +30,7 @@ const AUDIT_LINES: Array<[string, string]> = [
   ["Conversii Google Ads", "✓"],
   ["TikTok Pixel", "✓"],
   ["Consent Mode v2", "✓"],
+  ["SEO + vizibil pentru agenți AI", "✓"],
   ["Site demo pe brandul tău", "✓"],
 ];
 
