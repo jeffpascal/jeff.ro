@@ -3,9 +3,10 @@ import "./globals.css";
 import { LanguageProvider } from "./i18n/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "Meditații AI pentru afaceri — live, pe cazul tău | jeff.ro",
+  metadataBase: new URL("https://jeff.ro"),
+  title: "Site-uri de e-commerce rapide, tracking corect și reclame cu agenți AI | jeff.ro",
   description:
-    "Vii cu problema din afacerea ta. O clarificăm, alegem unealta AI potrivită și construim împreună ceva ce poți folosi. Sesiuni live, în română, în grupă mică. Prima sesiune deschisă e gratuită.",
+    "Construiesc magazine online rapide pe mobil, repar Meta Pixel, Conversions API, GA4, Google Ads și TikTok, apoi administrez reclamele cu agenți AI. Audit gratuit și site demo pe brandul tău.",
 };
 
 export default function RootLayout({

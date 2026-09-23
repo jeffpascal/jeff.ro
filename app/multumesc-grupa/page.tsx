@@ -40,7 +40,7 @@ export default function MultumescGrupa() {
                 garantat, iar eu îl pregătesc înainte.
               </p>
               <p>
-                <a href="/" className={styles.btnGhost}>← Înapoi pe jeff.ro</a>
+                <a href="/meditatii" className={styles.btnGhost}>← Înapoi la Meditații AI</a>
               </p>
             </div>
           </div>

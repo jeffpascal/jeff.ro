@@ -40,7 +40,7 @@ export default function MultumescRezervare() {
                 de confirmare — îl citesc înainte de sesiune.
               </p>
               <p>
-                <Link href="/" className={styles.btnGhost}>← Înapoi la pagina principală</Link>
+                <Link href="/meditatii" className={styles.btnGhost}>← Înapoi la Meditații AI</Link>
               </p>
             </div>
           </div>
